@@ -1,0 +1,105 @@
+:root {
+    /* Common */
+    --font-family: Inter;
+    --font-color: var(--gray-900);
+    --default-letter-spacing: -0.02em; /* Используется там, где Letter Spacing не обозначен */
+
+    /* Heading H1 */
+
+        /* Desktop */
+    --h1-font-size-desktop: 60px;
+    --h1-line-height-desktop: 72px;
+    --h1-letter-spacing-desktop: -0.02em;
+    --h1-font-weight-desktop: 700;
+
+        /* Tablet */
+    --h1-font-size-tablet: 48px;
+    --h1-line-height-tablet: 48px;
+    --h1-letter-spacing-tablet: -0.02em;
+    --h1-font-weight-tablet: 700;
+
+        /* Mobile */
+    --h1-font-size-mobile: 36px;
+    --h1-line-height-mobile: 40px;
+    --h1-letter-spacing-mobile: var(--default-letter-spacing);
+    --h1-font-weight-mobile: 600;
+
+    /* Heading H2 */
+
+        /* Desktop */
+    --h2-font-size-desktop: 36px;
+    --h2-line-height-desktop: 40px;
+    --h2-letter-spacing-desktop: -0.02em;
+    --h2-font-weight-desktop: 600;
+
+        /* Tablet & Mobile */
+    --h2-font-size-tablet-mobile: 18px;
+    --h2-line-height-tablet-mobile: 28px;
+    --h2-letter-spacing-tablet-mobile: -0.02em;
+    --h2-font-weight-tablet-mobile: 600;
+
+    /* Heading H3 */
+
+        /* Desktop */
+    --h3-font-size-desktop: 30px;
+    --h3-line-height-desktop: 36px;
+    --h3-letter-spacing-desktop: -0.02em;
+    --h3-font-weight-desktop-semi-bold: 600;
+    --h3-font-weight-desktop-bold: 700;
+
+        /* Tablet & Mobile */
+    --h3-font-size-tablet-mobile: 24px;
+    --h3-line-height-tablet-mobile: 32px;
+    --h3-letter-spacing-tablet-mobile: -0.02em;
+    --h3-font-weight-tablet-mobile-semi-bold: 600;
+    --h3-font-weight-tablet-mobile-bold: 700;
+
+    /* Subtitle */
+
+        /* Desktop */
+    --subtitle-font-size-desktop: 20px;
+    --subtitle-line-height-desktop: 28px;
+    --subtitle-letter-spacing-desktop: var(--default-letter-spacing);
+    --subtitle-font-weight-desktop-normal: 400;
+    --subtitle-font-weight-desktop-semi-bold: 600;
+
+        /* Tablet & Mobile */
+    --subtitle-font-size-tablet-mobile: 18px;
+    --subtitle-line-height-tablet-mobile: 28px;
+    --subtitle-letter-spacing-tablet-mobile: var(--default-letter-spacing);
+    --subtitle-font-weight-tablet-mobile-normal: 400;
+    --subtitle-font-weight-tablet-mobile-semi-bold: 600;
+
+    /* Body1 */
+
+        /* Desktop */
+    --body-1-font-size-desktop: 18px;
+    --body-1-line-height-desktop: 28px;
+    --body-1-letter-spacing-desktop: var(--default-letter-spacing);
+    --body-1-font-weight-desktop-normal: 400;
+
+        /* Tablet & Mobile */
+    --body-1-font-size-tablet-mobile: 16px;
+    --body-1-line-height-tablet-mobile: 24px;
+    --body-1-letter-spacing-tablet-mobile: var(--default-letter-spacing);
+    --body-1-font-weight-tablet-mobile-normal: 400;
+
+    /* Body2 */
+
+        /* All Screen Sizes */
+    --body-2-font-size-all: 16px;
+    --body-2-line-height-all: 24px;
+    --body-2-letter-spacing-all: var(--default-letter-spacing);
+    --body-2-font-weight-all-normal: 400;
+    --body-2-decoration-line-all-normal: none;
+    --body-2-decoration-line-all-underline: underline;
+
+    /* Body3 */
+
+        /* All Screen Sizes */
+    --body-3-font-size-all: 14px;
+    --body-3-line-height-all: 20px;
+    --body-3-letter-spacing-all: var(--default-letter-spacing);
+    --body-3-font-weight-all-normal: 400;
+    --body-3-font-weight-all-medium: 500;
+}

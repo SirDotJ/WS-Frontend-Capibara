@@ -1,0 +1,11 @@
+:root {
+    /* Desktop: >= 1024px */
+    --desktop-min: 1024px;
+
+    /* Tablet: >= 768px & < 1024px */
+    --tablet-max: 1023px;
+    --tablet-min: 768px;
+
+    /* Mobile: < 768px */
+    --mobile-max: 767px;
+}
