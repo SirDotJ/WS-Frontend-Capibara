@@ -1,0 +1,27 @@
+.header {
+    max-width: 1440px;
+    padding: 16px 80px;
+}
+
+.header-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+
+.header-items__logo {
+    width: 129px;
+    height: 36px;
+    align-self: center;
+}
+
+.header-items-navigation {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.header-items-navigation * {
+    color: var(--gray-600);
+}
