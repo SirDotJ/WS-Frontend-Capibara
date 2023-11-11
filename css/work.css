@@ -19,12 +19,13 @@
 
 .work-card {
     align-self: center;
+    align-items: center;
+    justify-content: center;
     border-radius: 12px;
     box-shadow: var(--drop-shadow-md);
     background: var(--gray-default);
     max-width: 1000px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "preview info";
 }
@@ -36,9 +37,10 @@
 
 .work-preview {
     padding: 48px;
-    min-width: 420px;
     justify-content: center;
+    height: 100%;
     box-shadow: var(--drop-shadow-md);
+    align-items: center;
 }
 
 .work-preview--background_gray_100 {
