@@ -1,9 +1,12 @@
 .contact {
-
+    position: relative;
+    padding: 96px 80px;
 }
 
 .contact-content-wrapper {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-header {
@@ -23,10 +26,10 @@
 }
 
 .contact-info__email::before {
-    content: url("assets/images/envelope.svg");
+    content: url("../assets/images/envelope.svg");
 }
 
 .contact-info__phone::before {
-    content: url("assets/images/phone-alt.svg");
+    content: url("../assets/images/phone-alt.svg");
 }
 
