@@ -1,25 +1,70 @@
 .experience {
+    position: relative;
+    padding: 96px 80px;
+    max-width: 1440px;
+    justify-content: center;
+}
 
+.experience--background-gray-50 {
+    background: var(--gray-50);
 }
 
 .experience-content-wrapper {
-
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
 }
 
 .experience-header-wrapper {
-
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .experience-cards {
-
+    display: grid;
+    grid-template-areas:
+        "period-1 display"
+        "period-2 display"
+        "period-3 display";
+    column-gap: 32px;
+    row-gap: 0;
+    justify-content: center;
 }
 
-.experience-cards__period {
+.experience-cards-period {
+    padding: 16px 32px;
+}
 
+.experience-cards-period--area-card-1 {
+    grid-area: period-1;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.experience-cards-period--area-card-2 {
+    grid-area: period-2;
+}
+
+.experience-cards-period--area-card-3 {
+    grid-area: period-3;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-bottom: 32px;
+}
+
+.experience-cards-period--background-gray-default {
+    background: var(--gray-default);
 }
 
 .experience-display {
+    grid-area: display;
+    border-radius: 12px;
+    padding: 32px;
+}
 
+.experience-display--background-gray-default {
+    background: var(--gray-default);
 }
 
 .experience-display__logo {
@@ -36,4 +81,16 @@
 
 .experience-display-list {
 
+}
+
+.experience__bottom-left-apricots {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.experience__bottom-right-apricots {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }

@@ -1,6 +1,8 @@
 .introduction {
+    position: relative;
     background: var(--gray-default);
     padding: 96px 80px 120px;
+    justify-content: center;
 }
 
 .introduction-content-wrapper {
@@ -18,6 +20,7 @@
 
 .introduction-text-wrapper {
     grid-area: text;
+    max-width: 768px;
 }
 
 .want-to-employ-you {
@@ -58,33 +61,24 @@
     margin-top: -360px;
 }
 
-.waves {
-    position: relative;
+.waves__wave {
+    position: absolute;
     bottom: 0;
-    overflow: hidden;
-}
-
-.waves__wave-back {
-    position: absolute;
-    top: 0;
     left: 0;
+    width: 100%;
+    overflow: visible;
 }
 
-.waves__apricot-small {
+.waves__apricot {
     position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 5%;
+    left: 7%;
+    width: 6%;
 }
 
-.waves__apricot-large {
+.apricot--turned {
     position: absolute;
-    top: 0;
-    rotate: 70deg;
-}
-
-.waves__wave-front {
-    position: absolute;
-    top: -20px;
-    left: 0;
-    transform: translateY(-50%);
+    bottom: 0;
+    left: 6%;
+    transform: translateX(100%) translateY(-30%) rotate(40deg) ;
 }

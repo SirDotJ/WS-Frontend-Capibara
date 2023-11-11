@@ -1,6 +1,6 @@
 .header {
-    max-width: 1440px;
     padding: 16px 80px;
+    justify-content: center;
 }
 
 .header-items {

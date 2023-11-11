@@ -17,8 +17,8 @@
     <link rel="stylesheet" type="text/css" href="css/contact.css">
     <style>
         body {
-            max-width: 1440px;
             margin: auto;
+            overflow-x: visible;
         }
     </style>
 </head>
@@ -68,14 +68,13 @@
             <div class="portrait__shadow"></div>
             <img class="portrait__image " src="assets/images/portrait.png" alt="Портрет Капибары">
         </div>
-    </div>
-    <div class="waves">
-        <img src="assets/images/wave_back.png" alt="Волна сзади">
 
-<!--        <img class="waves__apricot-small" src="assets/images/apricot.svg" alt="Апельсин на волнах маленький">-->
-<!--        <img class="waves__apricot-large" src="assets/images/apricot.svg" alt="Апельсин на волнах большой">-->
+        <img class="waves__wave" src="assets/images/wave_back.png" alt="Волна сзади">
 
-<!--        <img src="assets/images/wave_front.png" alt="Волна спереди">-->
+        <img class="waves__apricot" src="assets/images/apricot.svg" alt="Апельсин на волнах">
+        <img class="waves__apricot apricot--turned" src="assets/images/apricot.svg" alt="Апельсин на волнах">
+
+        <img class="waves__wave" src="assets/images/wave_front.png" alt="Волна спереди">
     </div>
 </section>
 <section class="skills">
@@ -84,38 +83,38 @@
             <h1 class="h1 h1--bold text--center text-color--gray-600">
                 Skills
             </h1>
-            <p class="subtitle subtitle--normal text--center">
+            <p class="subtitle subtitle--normal text--center text-color--gray-600">
                 The skills, tools and technologies Capybara really good at:
             </p>
         </div>
         <div class="skills-carousel-wrapper">
             <div class="skill-card-wrapper">
                 <img class="skill-card__image" src="assets/images/icon-javascript.svg" alt="Javascript Лого">
-                <p class="body-1 body-1--normal text--center">
+                <p class="body-1 body-1--normal text--center text-color--gray-600">
                     Javascript
                 </p>
             </div>
             <div class="skill-card">
                 <img class="skill-card__image" src="assets/images/icon-typescript.svg" alt="Typescript Лого">
-                <p class="body-1 body-1--normal text--center">
+                <p class="body-1 body-1--normal text--center text-color--gray-600">
                     Typescript
                 </p>
             </div>
             <div class="skill-card">
                 <img class="skill-card__image" src="assets/images/icon-react.svg" alt="React Лого">
-                <p class="body-1 body-1--normal text--center">
+                <p class="body-1 body-1--normal text--center text-color--gray-600">
                     React
                 </p>
             </div>
             <div class="skill-card">
                 <img class="skill-card__image" src="assets/images/icon-nextjs.svg" alt="Next.js Лого">
-                <p class="body-1 body-1--normal text--center">
+                <p class="body-1 body-1--normal text--center text-color--gray-600">
                     Next.js
                 </p>
             </div>
             <div class="skill-card">
                 <img class="skill-card__image" src="assets/images/icon-nodejs.svg" alt="Node.js Лого">
-                <p class="body-1 body-1--normal text--center">
+                <p class="body-1 body-1--normal text--center text-color--gray-600">
                     Node.js
                 </p>
             </div>
@@ -123,27 +122,33 @@
         <img class="skills__corner-apricot-image" src="assets/images/apricot_corner.png" alt="Большой апельсин на правом нижнем углу">
     </div>
 </section>
-<section class="experience" id="experience">
+<section class="experience experience--background-gray-50" id="experience">
     <div class="experience-content-wrapper">
         <div class="experience-header-wrapper">
-            <h1>
+            <h1 class="h1 h1--bold text--center text-color--orange-500">
                 Experience
             </h1>
-            <p class="subtitle">
+            <p class="subtitle text--center text-color--gray-600">
                 Here is a quick summary of Capibarara most recent experiences:
             </p>
         </div>
         <div class="experience-cards">
-            <div class="experience-cards__period">
-                May 2020 - Present
+            <div class="experience-cards-period experience-cards-period--background-gray-default experience-cards-period--area-card-1">
+                <p class="body-2 body-2--normal text--center text-color--gray-950">
+                    May 2020 - Present
+                </p>
             </div>
-            <div class="experience-cards__period">
-                Dec 2019 - May 2020
+            <div class="experience-cards-period experience-cards-period--background-gray-default experience-cards-period--area-card-2">
+                <p class="body-2 body-2--normal text--center text-color--gray-500">
+                    Dec 2019 - May 2020
+                </p>
             </div>
-            <div class="experience-cards__period">
-                May 2019 - Dec 2019
+            <div class="experience-cards-period experience-cards-period--background-gray-default experience-cards-period--area-card-3">
+                <p class="body-2 body-2--normal text--center text-color--gray-500">
+                    May 2019 - Dec 2019
+                </p>
             </div>
-            <div class="experience-display">
+            <div class="experience-display experience-display--background-gray-default">
                 <img class="experience-display__logo" src="assets/images/ws-logo.svg" alt="Логотип White Soft">
                 <div class="experience-display-content">
                     <p class="experience-display-content__title subtitle subtitle--semi-bold">
@@ -166,13 +171,13 @@
             </div>
         </div>
     </div>
-    <img src="assets/images/apricot_pile_1.png" alt="Куча апельсинов в левом нижнем углу">
-    <img src="assets/images/apricot_pile_2.png" alt="Куча апельсинов в правом нижнем углу">
+    <img class="experience__bottom-left-apricots" src="assets/images/apricot_pile_1.png" alt="Куча апельсинов в левом нижнем углу">
+    <img class="experience__bottom-right-apricots" src="assets/images/apricot_pile_2.png" alt="Куча апельсинов в правом нижнем углу">
 </section>
 <section class="work" id="work">
     <div class="work-content-wrapper">
         <div class="work-header">
-            <h1>
+            <h1 class="h1 h1--bold text--center text-color--gray-600">
                 Work
             </h1>
             <p class="subtitle">
@@ -435,5 +440,6 @@
         </div>
     </div>
 </section>
+
 </body>
 </html>

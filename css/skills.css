@@ -1,8 +1,10 @@
 .skills {
+    position: relative;
     display: flex;
+    flex-direction: column;
     padding: 96px 80px 96px;
     justify-content: center;
-
+    align-items: center;
 }
 
 .skills-content-wrapper {
@@ -10,6 +12,7 @@
     flex-direction: column;
     gap: 48px;
     flex-grow: 1;
+    align-self: stretch;
     align-items: center;
 }
 
@@ -20,11 +23,11 @@
 }
 
 .skills-carousel-wrapper {
-    align-self: stretch;
-    align-items: center;
     display: flex;
     flex-direction: row;
-    max-width: 900px;
+    max-width: 720px;
+    align-self: stretch;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -32,17 +35,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    align-self: stretch;
     gap: 8px;
     width: 90px;
 }
 
 .skill-card__image {
+    align-self: center;
     width: 64px;
     height: 64px;
 }
 
 .skills__corner-apricot-image {
-    align-self: flex-end;
-    width: 110px;
-    height: 198px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
