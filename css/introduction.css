@@ -1,6 +1,5 @@
 .introduction {
     background: var(--gray-default);
-    max-width: 1440px;
     padding: 96px 80px 120px;
 }
 
@@ -30,14 +29,10 @@
     align-content: end;
 }
 
-.want-to-employ-you-button {
+.want-to-employ-you__button {
     background: var(--orange-400);
     padding: 8px 48px;
     border-radius: 20px;
-}
-
-.want-to-employ-you-button__text {
-    color: var(--gray-50);
 }
 
 .portrait {
