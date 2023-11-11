@@ -1,7 +1,6 @@
 .experience {
     position: relative;
     padding: 96px 80px;
-    max-width: 1440px;
     justify-content: center;
 }
 
@@ -51,6 +50,7 @@
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     margin-bottom: 32px;
+    box-shadow: var(--drop-shadow-md);
 }
 
 .experience-cards-period--background-gray-default {
@@ -58,9 +58,14 @@
 }
 
 .experience-display {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
     grid-area: display;
     border-radius: 12px;
     padding: 32px;
+    box-shadow: var(--drop-shadow-md);
+    min-width: 420px;
 }
 
 .experience-display--background-gray-default {
@@ -68,11 +73,14 @@
 }
 
 .experience-display__logo {
+    max-height: 46px;
 
 }
 
 .experience-display-content {
-
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .experience-display-content__tittle {
@@ -80,7 +88,18 @@
 }
 
 .experience-display-list {
+    overflow-y: scroll;
+    max-height: 120px;
+}
 
+.experience-display-list li {
+    margin-bottom: 16px;
+}
+
+.experience-display-list li:before {
+    content: url("../assets/images/list_point_orange.svg");
+    width: 32px;
+    height: 32px;
 }
 
 .experience__bottom-left-apricots {
