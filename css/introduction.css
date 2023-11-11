@@ -1,36 +1,95 @@
-
 .introduction {
+    background: var(--gray-default);
+    max-width: 1440px;
+    padding: 96px 80px 120px;
+}
 
+.introduction-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.introduction-info {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
 }
 
 .introduction-text-wrapper {
-
+    grid-area: text;
 }
 
 .want-to-employ-you {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    grid-area: want-to-employ-you;
+    align-content: end;
 }
 
-.want-to-employ-you__button {
+.want-to-employ-you-button {
+    background: var(--orange-400);
+    padding: 8px 48px;
+    border-radius: 20px;
+}
 
+.want-to-employ-you-button__text {
+    color: var(--gray-50);
+}
+
+.portrait {
+    width: 320px;
+    height: 360px;
+    grid-area: portrait;
+}
+
+.portrait__shadow {
+    display: inline-block;
+    width: 280px;
+    height: 320px;
+    flex-shrink: 0;
+    margin-left: 40px;
+    border: 8px solid var(--gray-default);
+    background: var(--gray-200);
+}
+
+.portrait__image {
+    width: 280px;
+    height: 320px;
+    border: 8px solid var(--gray-default);
+    margin-top: -360px;
 }
 
 .waves {
-
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
 }
 
 .waves__wave-back {
-
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .waves__apricot-small {
-
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .waves__apricot-large {
-
+    position: absolute;
+    top: 0;
+    rotate: 70deg;
 }
 
 .waves__wave-front {
-
+    position: absolute;
+    top: -20px;
+    left: 0;
+    transform: translateY(-50%);
 }

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/breakpoints.css">
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/drop-shadows.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/introduction.css">
-    <link rel="stylesheet" href="css/skills.css">
-    <link rel="stylesheet" href="css/experience.css">
-    <link rel="stylesheet" href="css/work.css">
-    <link rel="stylesheet" href="css/testimonials.css">
-    <link rel="stylesheet" href="css/contact.css">
+    <title>Capibarara</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/breakpoints.css">
+    <link rel="stylesheet" type="text/css" href="css/colors.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/drop-shadows.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/introduction.css">
+    <link rel="stylesheet" type="text/css" href="css/skills.css">
+    <link rel="stylesheet" type="text/css" href="css/experience.css">
+    <link rel="stylesheet" type="text/css" href="css/work.css">
+    <link rel="stylesheet" type="text/css" href="css/testimonials.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
 </head>
 <body>
 <div class="header">
@@ -29,41 +29,44 @@
         </nav>
     </div>
 </div>
-<div class="introduction">
-    <div class="portrait-wrapper">
-        <img src="assets/images/portrait.png" alt="Портрет Капибары">
-    </div>
-    <div class="introduction-text-wrapper">
-        <h1>
-            Hi, I'm Capybarara&nbsp;👋
-        </h1>
-        <p class="body-2">
-            Known for its adorable appearance and friendly nature, the
-            Capybara is now embarking on a journey to find a new job.
-            Motivated by the desire to explore new opportunities and
-            challenges, the Capybara is determined to utilize its unique skills
-            and traits to secure a fulfilling position!
-        </p>
-    </div>
-    <a class="want-to-employ-you" href="#contact">
-        <div class="want-to-employ-you__button">
-            I WANNA EMPLOY YOU!!!!
+<section class="introduction">
+    <div class="introduction-content-wrapper">
+        <div class="introduction-info">
+            <div class="introduction-text-wrapper">
+                <h1 class="h1 h1--bold">
+                    Hi, I'm Capybarara&nbsp;👋
+                </h1>
+                <p class="body-2 body-2--normal">
+                    Known for its adorable appearance and friendly nature, the
+                    Capybara is now embarking on a journey to find a new job.
+                    Motivated by the desire to explore new opportunities and
+                    challenges, the Capybara is determined to utilize its unique skills
+                    and traits to secure a fulfilling position!
+                </p>
+            </div>
+            <a class="want-to-employ-you" href="#contact">
+                <button class="want-to-employ-you-button">
+                    <p class="want-to-employ-you-button__text subtitle subtitle--semi-bold">
+                        I WANNA EMPLOY YOU!!!!
+                    </p>
+                </button>
+            </a>
         </div>
-    </a>
+        <div class="portrait">
+            <div class="portrait__shadow"></div>
+            <img class="portrait__image " src="assets/images/portrait.png" alt="Портрет Капибары">
+        </div>
+    </div>
     <div class="waves">
-        <svg class="waves__wave-back" xmlns="http://www.w3.org/2000/svg" width="1440" height="82" viewBox="0 0 1440 82" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0.386256L34.8 4.92035C68.4 9.45445 136.8 18.5226 205.2 23.0567C274.8 27.5908 343.2 27.5908 411.6 21.5454C480 15.4999 548.4 3.40899 616.8 0.386256C685.2 -2.63648 741 13.0279 809.4 14.5393C877.8 16.0506 960 3.40899 1028.4 9.45445C1096.8 15.4999 1165.2 30.6136 1234.8 30.6136C1303.2 30.6136 1371.6 15.4999 1405.2 7.94309L1440 0.386256V82H1405.2C1371.6 82 1303.2 82 1234.8 82C1165.2 82 1096.8 82 1028.4 82C960 82 891.6 82 823.2 82C754.8 82 685.2 82 616.8 82C548.4 82 480 82 411.6 82C343.2 82 274.8 82 205.2 82C136.8 82 68.4 82 34.8 82H0V0.386256Z" fill="#0099FF"/>
-        </svg>
+        <img src="assets/images/wave_back.png" alt="Волна сзади">
 
         <img class="waves__apricot-small" src="assets/images/apricot.svg" alt="Апельсин на волнах маленький">
         <img class="waves__apricot-large" src="assets/images/apricot.svg" alt="Апельсин на волнах большой">
 
-        <svg class="waves__wave-front" xmlns="http://www.w3.org/2000/svg" width="1440" height="61" viewBox="0 0 1440 61" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.25907L34.8 9.30023C68.4 12.3414 136.8 18.4237 205.2 21.4649C274.8 24.506 281.6 38.5549 350 34.5C418.4 30.4451 470.1 8.28651 538.5 6.25907C606.9 4.23163 725.6 33.4863 794 34.5C862.4 35.5137 1024.1 7.27279 1092.5 11.3277C1160.9 15.3826 1239.4 34.5 1309 34.5C1377.4 34.5 1406.4 5.0686 1440 0L1546 11.3277L1440 61H1405.2C1371.6 61 1303.2 61 1234.8 61C1165.2 61 1096.8 61 1028.4 61C960 61 891.6 61 823.2 61C754.8 61 685.2 61 616.8 61C548.4 61 480 61 411.6 61C343.2 61 274.8 61 205.2 61C136.8 61 68.4 61 34.8 61H0V6.25907Z" fill="#0090EF"/>
-        </svg>
+        <img src="assets/images/wave_front.png" alt="Волна спереди">
     </div>
-</div>
-<div class="skills">
+</section>
+<section class="skills">
     <div class="skills-content-wrapper">
         <h1>
             Skills
@@ -105,8 +108,8 @@
         </div>
         <img src="assets/images/apricot_corner.png" alt="Большой апельсин на правом нижнем углу">
     </div>
-</div>
-<div class="experience" id="experience">
+</section>
+<section class="experience" id="experience">
     <div class="experience-content-wrapper">
         <div class="experience-header-wrapper">
             <h1>
@@ -151,8 +154,8 @@
     </div>
     <img src="assets/images/apricot_pile_1.png" alt="Куча апельсинов в левом нижнем углу">
     <img src="assets/images/apricot_pile_2.png" alt="Куча апельсинов в правом нижнем углу">
-</div>
-<div class="work" id="work">
+</section>
+<section class="work" id="work">
     <div class="work-content-wrapper">
         <div class="work-header">
             <h1>
@@ -299,8 +302,8 @@
             </div>
         </div>
     </div>
-</div>
-<div class="testimonials" id="testimonials">
+</section>
+<section class="testimonials" id="testimonials">
     <div class="testimonials-content-wrapper">
         <div class="testimonials-header">
             <h1>
@@ -396,8 +399,8 @@
             </div>
         </div>
     </div>
-</div>
-<div class="contact" id="contact">
+</section>
+<section class="contact" id="contact">
     <div class="contact-content-wrapper">
         <div class="contact-header">
             <h1>
@@ -417,6 +420,6 @@
             </h2>
         </div>
     </div>
-</div>
+</section>
 </body>
 </html>

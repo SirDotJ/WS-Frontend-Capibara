@@ -1,5 +1,5 @@
 .contact {
-    
+
 }
 
 .contact-content-wrapper {
@@ -21,3 +21,12 @@
 .contact-info__phone {
 
 }
+
+.contact-info__email::before {
+    content: url("assets/images/envelope.svg");
+}
+
+.contact-info__phone::before {
+    content: url("assets/images/phone-alt.svg");
+}
+
