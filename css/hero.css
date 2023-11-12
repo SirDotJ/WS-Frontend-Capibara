@@ -1,28 +1,28 @@
-.introduction {
+.hero {
     position: relative;
     background: var(--gray-default);
     justify-content: center;
 }
 
-.introduction-content-wrapper {
+.hero-content-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 32px;
 }
 
-.introduction-info {
+.hero-info {
     display: flex;
     flex-direction: column;
     gap: 48px;
 }
 
-.introduction-text-wrapper {
+.hero-text-wrapper {
     grid-area: text;
     max-width: 768px;
 }
 
-.want-to-employ-you {
+.employ {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -31,19 +31,19 @@
     align-content: end;
 }
 
-.want-to-employ-you__button {
+.employ__button {
     background: var(--orange-400);
     padding: 8px 48px;
     border-radius: 20px;
 }
 
-.portrait {
+.hero-portrait {
     width: 320px;
     height: 360px;
     grid-area: portrait;
 }
 
-.portrait__shadow {
+.hero-portrait__shadow {
     display: inline-block;
     width: 280px;
     height: 320px;
@@ -53,7 +53,7 @@
     background: var(--gray-200);
 }
 
-.portrait__image {
+.hero-portrait__image {
     width: 280px;
     height: 320px;
     border: 8px solid var(--gray-default);
