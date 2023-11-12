@@ -1,7 +1,5 @@
 .hero {
-    position: relative;
     background: var(--gray-default);
-    justify-content: center;
 }
 
 .hero-content-wrapper {
@@ -20,6 +18,10 @@
 .hero-text-wrapper {
     grid-area: text;
     max-width: 768px;
+}
+
+.hero-info-text__paragraph {
+    display: none;
 }
 
 .employ {
@@ -98,4 +100,21 @@
 
 .apricot--turned {
     transform: translateX(200%) translateY(-20%) rotate(40deg);
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .hero-info-text__paragraph {
+        display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
 }
