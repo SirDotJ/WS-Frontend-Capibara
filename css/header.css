@@ -1,27 +1,41 @@
-.header {
-    padding: 16px 80px;
-    justify-content: center;
-}
-
-.header-items {
+.header-content-wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Нужен для заполнения всего пространства header */
     padding: 0 32px;
 }
 
-.header-items__logo {
+.header__logo {
     width: 129px;
     height: 36px;
-    align-self: center;
 }
 
-.header-items-navigation {
-    align-self: center;
+.header-navigation {
     display: flex;
     flex-direction: row;
     gap: 24px;
 }
 
-.header-items-navigation * {
-    color: var(--gray-600);
+.header-burger-button {
+    display: none;
+    padding: 8px;
+    border-radius: 8px;
+    background: var(--orange-400);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .header-navigation {
+        display: none;
+    }
+
+    .header-burger-button {
+        display: block;
+    }
+}
+
+.header-burger-button__image {
+    width: 24px;
+    height: 24px;
 }

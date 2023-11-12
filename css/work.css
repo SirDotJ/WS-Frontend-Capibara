@@ -1,9 +1,3 @@
-.work {
-    position: relative;
-    padding: 96px 80px;
-    justify-content: center;
-}
-
 .work-content-wrapper {
     display: flex;
     flex-direction: column;
@@ -19,7 +13,7 @@
 
 .work-card {
     align-self: center;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     border-radius: 12px;
     box-shadow: var(--drop-shadow-md);
@@ -36,9 +30,10 @@
 }
 
 .work-preview {
+    display: flex;
+    flex-direction: column;
     padding: 48px;
     justify-content: center;
-    height: 100%;
     box-shadow: var(--drop-shadow-md);
     align-items: center;
 }
@@ -56,7 +51,6 @@
 .work-description-wrapper {
     grid-area: info;
     padding: 48px;
-    min-width: 420px;
 }
 
 .work-description-content {

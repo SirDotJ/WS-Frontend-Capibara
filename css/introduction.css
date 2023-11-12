@@ -1,7 +1,6 @@
 .introduction {
     position: relative;
     background: var(--gray-default);
-    padding: 96px 80px 120px;
     justify-content: center;
 }
 
@@ -66,14 +65,27 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    overflow: visible;
+    overflow-x: visible;
+}
+
+.waves__wave--back {
+    background-image: url("../assets/images/wave_back.svg");
+    background-repeat: repeat-x;
+    height: 82px;
+}
+
+.waves__wave--front {
+    background-image: url("../assets/images/wave_front.svg");
+    background-repeat: repeat-x;
+    height: 61px;
 }
 
 .waves__apricot {
     position: absolute;
-    bottom: 5%;
+    bottom: 4%;
     left: 7%;
-    width: 6%;
+    width: 64px;
+    height: 64px;
 }
 
 .apricot--turned {

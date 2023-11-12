@@ -112,7 +112,7 @@
     --body-3-line-height: 20px;
 }
 
-/* For any screen size */
+/* All Screen Sizes */
 
 .h1 {
     font-family: var(--h1-font-family);
@@ -304,70 +304,70 @@
     -webkit-box-orient: vertical;
 }
 
-.text-color--gray-default {
+.text--gray-default {
     color: var(--gray-default);
 }
 
-.text-color--50 {
+.text--gray-50 {
     color: var(--gray-50);
 }
 
-.text-color--gray-100 {
+.text--gray-100 {
     color: var(--gray-100);
 }
 
-.text-color--gray-200 {
+.text--gray-200 {
     color: var(--gray-200);
 }
 
-.text-color--gray-300 {
+.text--gray-300 {
     color: var(--gray-300);
 }
 
-.text-color--gray-400 {
+.text--gray-400 {
     color: var(--gray-400);
 }
 
-.text-color--gray-500 {
+.text--gray-500 {
     color: var(--gray-500);
 }
 
-.text-color--gray-600 {
+.text--gray-600 {
     color: var(--gray-600);
 }
 
-.text-color--gray-700 {
+.text--gray-700 {
     color: var(--gray-700);
 }
 
-.text-color--gray-800 {
+.text--gray-800 {
     color: var(--gray-800);
 }
 
-.text-color--gray-900 {
+.text--gray-900 {
     color: var(--gray-900);
 }
 
-.text-color--gray-950 {
+.text--gray-950 {
     color: var(--gray-950);
 }
 
-.text-color--orange-300 {
+.text--orange-300 {
     color: var(--orange-300);
 }
 
-.text-color--orange-400 {
+.text--orange-400 {
     color: var(--orange-400);
 }
 
-.text-color--orange-500 {
+.text--orange-500 {
     color: var(--orange-500);
 }
 
-.text-color--yellow-500 {
+.text--yellow-500 {
     color: var(--yellow-500);
 }
 
-.text-color--error-500 {
+.text--error-500 {
     color: var(--error-500);
 }

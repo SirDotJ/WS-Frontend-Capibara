@@ -1,0 +1,69 @@
+.site {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow-x: visible;
+}
+
+/* Any */
+.site > section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    /* Common padding */
+    .site > section {
+        padding: 96px 80px;
+    }
+
+    /* Header padding */
+    .site > section:first-child {
+        padding: 16px 80px;
+    }
+
+    /* Hero padding */
+    .site > section:first-child + section { /* nth-child is not supported in IE */
+        padding: 96px 80px 120px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Common padding */
+    .site > section {
+        padding: 64px;
+    }
+
+    /* Header padding */
+    .site > section:first-child {
+        padding: 16px 80px;
+    }
+
+    /* Hero padding */
+    .site > section:first-child + section { /* nth-child is not supported in IE */
+        padding: 64px 64px 120px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    /* Common padding */
+    .site > section {
+        padding: 32px 16px;
+    }
+
+    /* Header padding */
+    .site > section:first-child {
+        padding: 16px;
+    }
+
+    /* Hero padding */
+    .site > section:first-child + section { /* nth-child is not supported in IE */
+        padding: 32px 16px 120px;
+    }
+}

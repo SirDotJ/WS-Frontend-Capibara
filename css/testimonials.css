@@ -1,16 +1,5 @@
 .testimonials {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding: 96px 80px;
-    justify-content: center;
-    align-items: center;
     background: var(--gray-50);
-}
-
-.testimonials-content-wrapper {
-    display: flex;
-    flex-direction: column;
     gap: 48px;
 }
 
