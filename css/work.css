@@ -85,3 +85,22 @@
     width: 24px;
     height: 24px;
 }
+
+/* Tablet Vertical */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    .work-card {
+        grid-template-areas:
+            "preview"
+            "info";
+    }
+    .work-preview {
+        height: 480px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .work-preview {
+        display: none;
+    }
+}
