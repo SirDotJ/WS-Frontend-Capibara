@@ -15,6 +15,7 @@
     align-items: center;
     width: 100%;
     max-width: 1440px;
+    z-index: 0;
 }
 
 /*!* If waves and apricots need to display for the entire length at width higher than 1440px *!*/
