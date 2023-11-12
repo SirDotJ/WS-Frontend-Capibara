@@ -41,12 +41,16 @@
     .hero-content-wrapper {
         display: grid;
         grid-template-areas:
-            "info face"
-            "employ face";
+            "info . face"
+            "employ . face";
         grid-template-rows: auto 1fr;
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr auto;
         row-gap: 48px;
         column-gap: 32px;
+    }
+
+    .hero-text-wrapper > p {
+        display: block;
     }
 
     .hero-portrait {
@@ -71,10 +75,6 @@
         flex-direction: column;
         gap: 8px;
     }
-
-    .hero-info-text__paragraph {
-        display: block;
-    }
 }
 
 /* Tablet */
@@ -93,7 +93,7 @@
         justify-self: start;
     }
 
-    .hero-info-text__paragraph {
+    .hero-text-wrapper > p {
         display: none;
     }
 
@@ -123,7 +123,11 @@
         align-items: center;
     }
 
-    .hero-info-text__paragraph {
+    .hero-text-wrapper > h1 {
+        text-align: center;
+    }
+
+    .hero-text-wrapper > p {
         display: none;
     }
 
