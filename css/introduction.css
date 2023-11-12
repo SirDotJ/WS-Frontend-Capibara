@@ -60,6 +60,13 @@
     margin-top: -360px;
 }
 
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 .waves__wave {
     position: absolute;
     bottom: 0;
@@ -82,15 +89,13 @@
 
 .waves__apricot {
     position: absolute;
-    bottom: 4%;
-    left: 7%;
+    bottom: 0;
+    left: 0;
     width: 64px;
     height: 64px;
+    transform: translateX(100%) translateY(-40%);
 }
 
 .apricot--turned {
-    position: absolute;
-    bottom: 0;
-    left: 6%;
-    transform: translateX(100%) translateY(-30%) rotate(40deg) ;
+    transform: translateX(200%) translateY(-20%) rotate(40deg);
 }
