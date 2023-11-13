@@ -18,9 +18,11 @@
     <link rel="stylesheet" type="text/css" href="css/work.css">
     <link rel="stylesheet" type="text/css" href="css/testimonials.css">
     <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/reminder.css">
 
     <script src="js/copyOnClick.js" async></script>
     <script src="js/burger.js" async></script>
+    <script src="js/reminder.js" async></script>
 </head>
 <body class="site">
 <section class="header">
@@ -491,5 +493,11 @@
         </div>
     </div>
 </section>
+<div id="reminder">
+    <img class="reminder__image" src="assets/images/annoying_reminder.png" alt="Do you wanna employ me?">
+    <button class="reminder__close-button" onclick="hideReminder()">
+        <img src="assets/images/times.svg" alt="Close">
+    </button>
+</div>
 </body>
 </html>

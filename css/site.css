@@ -6,6 +6,15 @@
     align-items: center;
 }
 
+/* Hiding scrollbar due to reminder */
+.site {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.site::-webkit-scrollbar {
+    display: none;
+}
+
 /* Any */
 .site > section {
     position: relative;
