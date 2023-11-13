@@ -26,5 +26,3 @@ const copyEmail = async () => {
     await copyField(email);
     await playFadeInFadeOut(emailCopyTooltip);
 }
-
-
