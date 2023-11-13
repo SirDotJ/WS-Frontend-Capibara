@@ -452,12 +452,18 @@
             </p>
         </div>
         <div class="contact-info">
-            <h2 id="email" class="contact-info__email h2 h2--semi-bold text--center text--gray-600" onclick="copyEmail()">
-               capibarara@gmail.com
-            </h2>
-            <h2 id="phone" class="contact-info__phone h2 h2--semi-bold text--center text--gray-600" onclick="copyPhone()">
-                +8&nbsp;800&nbsp;200-59-20
-            </h2>
+            <div class="contact-info-item-wrapper">
+                <h2 id="email" class="contact-info__email h2 h2--semi-bold text--center text--gray-600" onclick="copyEmail()">
+                    capibarara@gmail.com
+                </h2>
+                <span id="email-copy-tooltip" class="subtitle subtitle--normal text--center text--gray-600">Copied!</span>
+            </div>
+            <div class="contact-info-item-wrapper">
+                <h2 id="phone" class="contact-info__phone h2 h2--semi-bold text--center text--gray-600" onclick="copyPhone()">
+                    +8&nbsp;800&nbsp;200-59-20
+                </h2>
+                <span id="phone-copy-tooltip" class="subtitle subtitle--normal text--center text--gray-600">Copied!</span>
+            </div>
         </div>
     </div>
 </section>
