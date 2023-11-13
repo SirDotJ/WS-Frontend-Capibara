@@ -1,3 +1,5 @@
+'use strict';
+
 /* Utility Functions */
 const copyField = async(tag) => {
     const content = tag.innerText.replaceAll(" ", " ");

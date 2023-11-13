@@ -1,3 +1,5 @@
+'use strict';
+
 const style = getComputedStyle(document.body)
 
 const color_1 = "#f4900c";

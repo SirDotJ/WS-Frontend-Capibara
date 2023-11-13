@@ -1,3 +1,5 @@
+'use strict';
+
 const enable = false;
 const timerIntervalMS = 120000;
 
