@@ -51,7 +51,7 @@
 .work-description-wrapper {
     grid-area: info;
     padding: 48px;
-    min-width: 420px;
+    /*min-width: 420px;*/
 }
 
 .work-description-content {
@@ -85,6 +85,27 @@
 .work__button {
     width: 24px;
     height: 24px;
+}
+
+/* Desktop */
+@media (min-width: 1024px)  {
+    .work-description-wrapper {
+        min-width: 420px;
+    }
+}
+
+/* Tablet horizontal */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+    .work-description-wrapper {
+        min-width: 420px;
+    }
+}
+
+/* Tablet horizontal near dangerously low width values */
+@media (min-width: 768px) and (max-width: 970px) and (orientation: landscape) {
+    .work-preview__image {
+        height: 250px;
+    }
 }
 
 /* Tablet Vertical */
