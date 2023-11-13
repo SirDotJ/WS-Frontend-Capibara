@@ -18,28 +18,11 @@
     padding: 16px 32px;
 }
 
-.experience-cards-period--area-card-1 {
-    grid-area: period-1;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-.experience-cards-period--area-card-2 {
-    grid-area: period-2;
-}
-
-.experience-cards-period--area-card-3 {
-    grid-area: period-3;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    box-shadow: var(--drop-shadow-md);
-}
-
 .experience-cards-period--background-gray-default {
     background: var(--gray-default);
 }
 
-.experience-display {
+#experience-display {
     grid-area: display;
     padding: 32px;
     box-shadow: var(--drop-shadow-md);
@@ -100,7 +83,7 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
-    .experience-cards {
+    #experience-cards {
         display: grid;
         grid-template-areas:
         "period-1 display"
@@ -130,12 +113,12 @@
         text-align: center;
     }
 
-    .experience-cards-period--area-card-1 {
+    #experience-cards > .experience-cards-period:first-child {
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
     }
 
-    .experience-cards-period--area-card-3 {
+    #experience-cards > .experience-cards-period:nth-last-child(1 of .experience-cards-period) {
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
         box-shadow: var(--drop-shadow-md);
@@ -152,7 +135,7 @@
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .experience-cards {
+    #experience-cards {
         display: grid;
         grid-template-areas:
         "period-1 display"
@@ -181,6 +164,17 @@
         border-radius: 12px;
     }
 
+    #experience-cards > .experience-cards-period:first-child {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    #experience-cards > .experience-cards-period:nth-last-child(1 of .experience-cards-period) {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        box-shadow: var(--drop-shadow-md);
+    }
+
     .experience__bottom-left-apricots {
         display: block;
     }
@@ -192,7 +186,7 @@
 
 /* Mobile */
 @media (max-width: 767px) {
-    .experience-cards {
+    #experience-cards {
         display: grid;
         grid-template-areas:
         "period-1"
@@ -221,7 +215,7 @@
         text-align: start;
     }
 
-    .experience-cards-period--area-card-3 {
+    #experience-cards > .experience-cards-period:nth-last-child(1 of .experience-cards-period) {
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
         box-shadow: var(--drop-shadow-md);

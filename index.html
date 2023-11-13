@@ -23,6 +23,8 @@
     <script src="js/copyOnClick.js" async></script>
     <script src="js/burger.js" async></script>
     <script src="js/reminder.js" async></script>
+
+    <script src="js/experienceDisplaySwitch.js" defer></script>
     <script src="js/contactColoring.js" defer></script>
 </head>
 <body class="site">
@@ -162,23 +164,23 @@
                 Here is a quick summary of Capibarara most recent experiences:
             </p>
         </div>
-        <div class="experience-cards">
-            <div class="experience-cards-period experience-cards-period--background-gray-default experience-cards-period--area-card-1">
+        <div id="experience-cards">
+            <div class="experience-cards-period experience-cards-period--background-gray-default" style="grid-area: period-1">
                 <p class="body-2 body-2--normal text--gray-950">
                     May 2020 - Present
                 </p>
             </div>
-            <div class="experience-cards-period experience-cards-period--background-gray-default experience-cards-period--area-card-2">
+            <div class="experience-cards-period experience-cards-period--background-gray-default" style="grid-area: period-2">
                 <p class="body-2 body-2--normal text--gray-500">
                     Dec 2019 - May 2020
                 </p>
             </div>
-            <div class="experience-cards-period experience-cards-period--background-gray-default experience-cards-period--area-card-3">
+            <div class="experience-cards-period experience-cards-period--background-gray-default" style="grid-area: period-3">
                 <p class="body-2 body-2--normal text--gray-500">
                     May 2019 - Dec 2019
                 </p>
             </div>
-            <div class="experience-display experience-display--background-gray-default">
+            <div id="experience-display" class="experience-display--background-gray-default">
                 <img class="experience-display__logo" src="assets/images/ws-logo.svg" alt="Логотип White Soft">
                 <div class="experience-display-content">
                     <p class="experience-display-content__title subtitle subtitle--semi-bold text--gray-900">

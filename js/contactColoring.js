@@ -18,7 +18,6 @@ function styleText(html) {
         }
         newText += letter;
     }
-    console.log(newText);
     return newText;
 }
 
