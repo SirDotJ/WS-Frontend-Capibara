@@ -18,6 +18,14 @@
     <link rel="stylesheet" type="text/css" href="css/work.css">
     <link rel="stylesheet" type="text/css" href="css/testimonials.css">
     <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/reminder.css">
+
+    <script src="js/copyOnClick.js" async></script>
+    <script src="js/burger.js" async></script>
+    <script src="js/reminder.js" async></script>
+
+    <script src="js/experienceDisplaySwitch.js" defer></script>
+    <script src="js/contactColoring.js" defer></script>
 </head>
 <body class="site">
 <section class="header">
@@ -38,11 +46,34 @@
             </a>
             <div></div> <!-- Divider -->
         </nav>
-        <button class="header-burger-button">
+        <button class="header-burger-button" onclick="openBurger()">
             <img class="header-burger-button__image" src="assets/images/burger.svg" alt="Кнопка навигации">
         </button>
     </div>
 </section>
+<div id="burger-menu">
+    <div class="burger-menu-header">
+        <img class="burger-menu__logo" src="assets/images/logo.svg" alt="Логотип Capibara com">
+        <button class="burger-menu__close-button" onclick="closeBurger()">
+            <img class="burger-menu-close-button__close-image" src="assets/images/times.svg" alt="Закрыть">
+        </button>
+    </div>
+    <nav class="burger-menu-navigation">
+        <a class="body-2 body-2--medium text--gray-600" href="#experience">
+            Experience
+        </a>
+        <a class="body-2 body-2--medium text--gray-600" href="#work">
+            Work
+        </a>
+        <a class="body-2 body-2--medium text--gray-600" href="#testimonials">
+            Testimonials
+        </a>
+        <a class="body-2 body-2--medium text--gray-600" href="#contact">
+            Contact
+        </a>
+        <div></div> <!-- Divider -->
+    </nav>
+</div>
 <section class="hero">
     <div class="hero-content-wrapper">
         <div class="hero-info">
@@ -133,23 +164,23 @@
                 Here is a quick summary of Capibarara most recent experiences:
             </p>
         </div>
-        <div class="experience-cards">
-            <div class="experience-cards-period experience-cards-period--background-gray-default experience-cards-period--area-card-1">
+        <div id="experience-cards">
+            <div class="experience-cards-period experience-cards-period--background-gray-default" style="grid-area: period-1">
                 <p class="body-2 body-2--normal text--gray-950">
                     May 2020 - Present
                 </p>
             </div>
-            <div class="experience-cards-period experience-cards-period--background-gray-default experience-cards-period--area-card-2">
+            <div class="experience-cards-period experience-cards-period--background-gray-default" style="grid-area: period-2">
                 <p class="body-2 body-2--normal text--gray-500">
                     Dec 2019 - May 2020
                 </p>
             </div>
-            <div class="experience-cards-period experience-cards-period--background-gray-default experience-cards-period--area-card-3">
+            <div class="experience-cards-period experience-cards-period--background-gray-default" style="grid-area: period-3">
                 <p class="body-2 body-2--normal text--gray-500">
                     May 2019 - Dec 2019
                 </p>
             </div>
-            <div class="experience-display experience-display--background-gray-default">
+            <div id="experience-display" class="experience-display--background-gray-default">
                 <img class="experience-display__logo" src="assets/images/ws-logo.svg" alt="Логотип White Soft">
                 <div class="experience-display-content">
                     <p class="experience-display-content__title subtitle subtitle--semi-bold text--gray-900">
@@ -450,14 +481,22 @@
             </p>
         </div>
         <div class="contact-info">
-            <h2 class="h2 h2--semi-bold text--center text--gray-600 contact-info__email">
-               capibarara@gmail.com
-            </h2>
-            <h2 class="h2 h2--semi-bold text--center text--gray-600 contact-info__phone">
-                +8&nbsp;800&nbsp;200-59-20
-            </h2>
+            <div class="contact-info-item-wrapper">
+                <h2 id="email" class="contact-info__email h2 h2--semi-bold text--center text--gray-600" onclick="copyEmail()">capibarara@gmail.com</h2>
+                <span id="email-copy-tooltip" class="subtitle subtitle--normal text--center text--gray-600">Copied!</span>
+            </div>
+            <div class="contact-info-item-wrapper">
+                <h2 id="phone" class="contact-info__phone h2 h2--semi-bold text--center text--gray-600" onclick="copyPhone()">+8&nbsp;800&nbsp;200-59-20</h2>
+                <span id="phone-copy-tooltip" class="subtitle subtitle--normal text--center text--gray-600">Copied!</span>
+            </div>
         </div>
     </div>
 </section>
+<div id="reminder">
+    <img class="reminder__image" src="assets/images/annoying_reminder.png" alt="Do you wanna employ me?">
+    <button class="reminder__close-button" onclick="hideReminder()">
+        <img src="assets/images/times.svg" alt="Close">
+    </button>
+</div>
 </body>
 </html>

@@ -1,0 +1,39 @@
+:root {
+    --reminder-width: 410px;
+    --reminder-height: 262px;
+}
+
+#reminder {
+    visibility: hidden;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transition: transform 2s ease-in-out, visibility 3s linear;
+    width: var(--reminder-width);
+    height: var(--reminder-height);
+    overflow-y: hidden;
+}
+
+#reminder.show {
+    visibility: visible;
+    transform: translateY(-100%);
+}
+
+.reminder__image {
+    width: var(--reminder-width);
+    height: var(--reminder-height);
+}
+
+.reminder__close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 6px;
+    border-radius: 8px;
+    background: var(--orange-400);
+}
+
+.reminder__close-button > img {
+    color: white;
+}
