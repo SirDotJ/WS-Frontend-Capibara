@@ -1,10 +1,9 @@
-
-
 const burgerContent = document.getElementById("burger-menu");
+// burgerContent.classList.toggle("show");
 const openBurger = async() => {
-    burgerContent.style.visibility = "visible";
+    burgerContent.classList.toggle("show");
 }
 
 const closeBurger = async() => {
-    burgerContent.style.visibility = "hidden";
+    burgerContent.classList.toggle("show");
 }
