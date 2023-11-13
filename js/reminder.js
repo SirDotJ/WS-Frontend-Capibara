@@ -1,6 +1,6 @@
 'use strict';
 
-const enable = false;
+const enable = true;
 const timerIntervalMS = 120000;
 
 const reminder = document.getElementById("reminder")
