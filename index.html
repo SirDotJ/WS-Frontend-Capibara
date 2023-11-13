@@ -450,7 +450,7 @@
             </p>
         </div>
         <div class="contact-info">
-            <h2 class="contact-info__email h2 h2--semi-bold text--center text--gray-600">
+            <h2 id="email" class="contact-info__email h2 h2--semi-bold text--center text--gray-600" onclick="copyEmail()">
                capibarara@gmail.com
             </h2>
             <h2 id="phone" class="contact-info__phone h2 h2--semi-bold text--center text--gray-600" onclick="copyPhone()">
@@ -461,11 +461,18 @@
 </section>
 
 <script>
+    /* Copy phone number */
     const phone = document.getElementById("phone");
-
     const copyPhone = async () => {
         const number = phone.innerHTML.replaceAll("&nbsp;", " ");
         await navigator.clipboard.writeText(number);
+    }
+
+    /* Copy email */
+    const email = document.getElementById("email");
+    const copyEmail = async () => {
+        const mail = email.innerHTML;
+        await navigator.clipboard.writeText(mail);
     }
 </script>
 
