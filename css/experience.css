@@ -43,7 +43,7 @@
     grid-area: display;
     padding: 32px;
     box-shadow: var(--drop-shadow-md);
-    /*min-width: 420px;*/
+    border-radius: 12px;
 }
 
 .experience-display--background-gray-default {
@@ -117,7 +117,15 @@
         border-radius: 12px;
     }
 
+    .experience-cards-period {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .experience-cards-period > p {
+        display: table-cell;
+        vertical-align: middle;
         text-align: center;
     }
 
@@ -152,6 +160,17 @@
         column-gap: 32px;
         row-gap: 0;
         justify-content: center;
+    }
+
+    .experience-cards-period {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experience-cards-period > p {
+        display: table-cell;
+        vertical-align: middle;
     }
 
     .experience-display {
