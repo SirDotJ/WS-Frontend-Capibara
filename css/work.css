@@ -51,7 +51,6 @@
 .work-description-wrapper {
     grid-area: info;
     padding: 48px;
-    /*min-width: 420px;*/
 }
 
 .work-description-content {
