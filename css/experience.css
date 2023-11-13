@@ -43,7 +43,7 @@
     grid-area: display;
     padding: 32px;
     box-shadow: var(--drop-shadow-md);
-    min-width: 420px;
+    /*min-width: 420px;*/
 }
 
 .experience-display--background-gray-default {
