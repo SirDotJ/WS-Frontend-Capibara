@@ -35,7 +35,6 @@
 
 .experience-display__logo {
     max-height: 46px;
-
 }
 
 .experience-display-content {
@@ -48,7 +47,6 @@
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-    max-height: 120px;
     gap: 16px;
 }
 
