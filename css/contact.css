@@ -45,6 +45,13 @@
     content: url("../assets/images/phone-alt.svg");
 }
 
+/* Filter turns black colored svg to color #ffd600 (i. e. --yellow-500) */
+/* Source: top solution - https://stackoverflow.com/questions/807878/how-to-make-javascript-execute-after-page-load */
+/* Filter is found using https://codepen.io/sosuke/pen/Pjoqqp */
+.contact-info__email::before, .contact-info__phone::before {
+    filter: invert(71%) sepia(60%) saturate(855%) hue-rotate(2deg) brightness(108%) contrast(103%);
+}
+
 #email-copy-tooltip, #phone-copy-tooltip {
     position: absolute;
     visibility: hidden;
