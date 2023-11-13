@@ -27,6 +27,10 @@
     gap: 16px;
 }
 
+.contact-info > * {
+    cursor: pointer;
+}
+
 .contact-info__email::before {
     content: url("../assets/images/envelope.svg");
 }
