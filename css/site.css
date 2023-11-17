@@ -27,6 +27,16 @@
     z-index: 0;
 }
 
+/* Class used to apply grayscale filter to element */
+.grayscale {
+    filter: grayscale(100%);
+}
+
+/* Class used to apply sepia filter to element */
+.sepia {
+    filter: sepia(100%);
+}
+
 /*!* If waves and apricots need to display for the entire length at width higher than 1440px *!*/
 /*.site > .hero {*/
 /*    max-width: 100%;*/

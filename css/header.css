@@ -35,6 +35,7 @@
     height: 100%;
     background: var(--gray-default);
     z-index: 2;
+    backdrop-filter: ;
 }
 
 #burger-menu.show {
