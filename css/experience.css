@@ -57,7 +57,8 @@
 
 .experience-display-list li:before {
     margin-top: -2px; /* Для выравнивания точек с серединой текста */
-    content: url("../assets/images/list_point_orange.svg");
+    /*v Использован онлайн сервис: https://yoksel.github.io/url-encoder/ */
+    content: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle id='Ellipse 1' cx='3' cy='3' r='3' fill='%23F4900C'/%3E%3C/svg%3E");
 }
 
 .experience__bottom-left-apricots {
