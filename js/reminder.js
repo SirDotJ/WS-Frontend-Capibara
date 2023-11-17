@@ -1,6 +1,7 @@
 'use strict';
 
 const enable = true;
+const firstIntervalMS = 2000;
 const timerIntervalMS = 120000;
 
 const reminder = document.getElementById("reminder")
@@ -13,5 +14,5 @@ const hideReminder = async() => {
 }
 
 if (enable) {
-    setTimeout(showReminder, timerIntervalMS);
+    setTimeout(showReminder, firstIntervalMS);
 }
