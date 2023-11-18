@@ -47,7 +47,11 @@ function fillExperienceCards() {
     }
 
     html += `
-        <div id="experience-display" class="experience-display--background-gray-default"></div>`
+        <div id="experience-display" class="experience-display--background-gray-default">
+            <img class="experience-display__logo" src="../assets/images/ws-logo.svg" alt="Логотип White Soft">
+            <p class="experience-display-content__title subtitle subtitle--semi-bold text--gray-900"></p>
+            <ul class="experience-display-list"></ul>
+        </div>`
 
     experienceCards.innerHTML = html;
     displayExperience(defaultExperienceToDisplay);
@@ -56,38 +60,38 @@ function fillExperienceCards() {
 let savedMobileAreas = ""
 function displayExperience(id) {
     const experienceDisplay = document.getElementById("experience-display");
-    const role = experiences[id].role;
-    const tasks = experiences[id].tasks;
+    experienceDisplay.classList.toggle("hide")
+    setTimeout(function() {
+        changeDisplayContent(id)
+    }, 750)
+    setTimeout(function() {
+        experienceDisplay.classList.toggle("hide")
+    }, 760)
+}
 
+function changeDisplayContent(id) {
+    /* Selecting period  */
     const previousPeriod = experienceCards.children[previousSelected];
     const newPeriod = experienceCards.children[id];
     unselectPeriod(previousPeriod);
     selectPeriod(newPeriod);
     previousSelected = id;
 
-    let html = "";
+    /* Setting the title */
+    const title = document.querySelector("#experience-display > .experience-display-content__title")
+    title.innerText = experiences[id].role
 
-    html += `
-        <img class="experience-display__logo" src="../assets/images/ws-logo.svg" alt="Логотип White Soft">
-        <div class="experience-display-content">
-            <p class="experience-display-content__title subtitle subtitle--semi-bold text--gray-900">
-                ${role}
-            </p>
-            <ul class="experience-display-list">`
-
-    const taskCount = tasks.length;
-    for (let i = 0; i < taskCount; i++) {
-        html += `
+    /* Filling out the tasks list */
+    const tasks = experiences[id].tasks;
+    const list = document.querySelector("#experience-display > .experience-display-list")
+    let listHTML = "";
+    for (let i = 0; i < tasks.length; i++) {
+        listHTML += `
                 <li class="test body-2 body-2--normal text--gray-600">
                     ${tasks[i]}
                 </li>`
     }
-
-    html += `
-            </ul>
-        </div>`
-
-    experienceDisplay.innerHTML = html;
+    list.innerHTML = listHTML
 
     /* Calculating change of template-area for mobile */
     let mobileAreas = ``
