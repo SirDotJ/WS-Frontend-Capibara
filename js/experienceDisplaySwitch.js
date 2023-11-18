@@ -56,13 +56,14 @@ function fillExperienceCards() {
 let savedMobileAreas = ""
 function displayExperience(id) {
     const experienceDisplay = document.getElementById("experience-display");
-    const role = experiences[id].role
-    const tasks = experiences[id].tasks
+    const role = experiences[id].role;
+    const tasks = experiences[id].tasks;
 
-    const previousPeriod = experienceCards.children[previousSelected]
-    const newPeriod = experienceCards.children[id]
-    unselectPeriod(previousPeriod)
-    selectPeriod(newPeriod)
+    const previousPeriod = experienceCards.children[previousSelected];
+    const newPeriod = experienceCards.children[id];
+    unselectPeriod(previousPeriod);
+    selectPeriod(newPeriod);
+    previousSelected = id;
 
     let html = "";
 
@@ -102,15 +103,18 @@ function displayExperience(id) {
     }
 }
 
-const selectedClass = "text--gray-900";
-const unselectedClass = "text--gray-default";
+const selectedClass = "text--bold";
 function selectPeriod(period) {
-    period.classList.remove(unselectedClass);
-    period.classList.add(selectedClass);
+    const text = period.querySelectorAll("p");
+    text.forEach((element) => {
+        element.classList.add(selectedClass);
+    })
 }
 function unselectPeriod(period) {
-    period.classList.remove(selectedClass);
-    period.classList.add(unselectedClass);
+    const text = period.querySelectorAll("p");
+    text.forEach((element) => {
+        element.classList.remove(selectedClass);
+    })
 }
 
 /* Used to make sure that grid areas change correctly on resize */

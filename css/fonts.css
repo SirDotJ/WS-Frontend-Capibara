@@ -371,3 +371,7 @@
 .text--error-500 {
     color: var(--error-500);
 }
+
+.text--bold {
+    font-weight: bold;
+}
