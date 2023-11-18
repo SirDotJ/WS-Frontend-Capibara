@@ -29,7 +29,7 @@ const experiences = [
 
 const experienceCards = document.getElementById("experience-cards");
 const defaultExperienceToDisplay = 0;
-let currentSelected = defaultExperienceToDisplay;
+let previousSelected = defaultExperienceToDisplay;
 function fillExperienceCards() {
     let html = "";
 
@@ -52,10 +52,17 @@ function fillExperienceCards() {
     experienceCards.innerHTML = html;
     displayExperience(defaultExperienceToDisplay);
 }
+
+let savedMobileAreas = ""
 function displayExperience(id) {
     const experienceDisplay = document.getElementById("experience-display");
     const role = experiences[id].role
     const tasks = experiences[id].tasks
+
+    const previousPeriod = experienceCards.children[previousSelected]
+    const newPeriod = experienceCards.children[id]
+    unselectPeriod(previousPeriod)
+    selectPeriod(newPeriod)
 
     let html = "";
 
@@ -81,16 +88,42 @@ function displayExperience(id) {
 
     experienceDisplay.innerHTML = html;
 
-    /* Change of template-area for mobile */
+    /* Calculating change of template-area for mobile */
+    let mobileAreas = ``
+    for (let i = 0; i < experiences.length; i++) {
+        mobileAreas += `"period-${i + 1}"\n`
+        if (id === i)
+            mobileAreas += `"display"\n`
+    }
+    savedMobileAreas = mobileAreas
+    /* Not applied for desktop/tablet but saved if we resize to mobile */
     if (window.innerWidth < 768) {
-        let newAreas = ``
-        for (let i = 0; i < experiences.length; i++) {
-            newAreas += `"period-${i + 1}"\n`
-            if (id === i)
-                newAreas += `"display"\n`
-        }
-        experienceCards.style.gridTemplateAreas = `${newAreas}`
+        experienceCards.style.gridTemplateAreas = `${mobileAreas}`
     }
 }
+
+const selectedClass = "text--gray-900";
+const unselectedClass = "text--gray-default";
+function selectPeriod(period) {
+    period.classList.remove(unselectedClass);
+    period.classList.add(selectedClass);
+}
+function unselectPeriod(period) {
+    period.classList.remove(selectedClass);
+    period.classList.add(unselectedClass);
+}
+
+/* Used to make sure that grid areas change correctly on resize */
+window.addEventListener(`resize`, function(event) {
+    if (event.target.innerWidth >= 768) {
+        let newAreas = ``
+        for (let i = 0; i < experiences.length; i++) {
+            newAreas += `"period-${i + 1} display"\n`
+        }
+        experienceCards.style.gridTemplateAreas = `${newAreas}`
+    } else {
+        experienceCards.style.gridTemplateAreas = `${savedMobileAreas}`
+    }
+}, true)
 
 fillExperienceCards()
