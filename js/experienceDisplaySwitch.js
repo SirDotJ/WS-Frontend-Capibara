@@ -80,6 +80,17 @@ function displayExperience(id) {
         </div>`
 
     experienceDisplay.innerHTML = html;
+
+    /* Change of template-area for mobile */
+    if (window.innerWidth < 768) {
+        let newAreas = ``
+        for (let i = 0; i < experiences.length; i++) {
+            newAreas += `"period-${i + 1}"\n`
+            if (id === i)
+                newAreas += `"display"\n`
+        }
+        experienceCards.style.gridTemplateAreas = `${newAreas}`
+    }
 }
 
 fillExperienceCards()
