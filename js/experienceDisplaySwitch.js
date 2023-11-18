@@ -60,13 +60,20 @@ function fillExperienceCards() {
 let savedMobileAreas = ""
 function displayExperience(id) {
     const experienceDisplay = document.getElementById("experience-display");
+    const periods = document.querySelectorAll("#experience-cards > .experience-cards-period")
     experienceDisplay.classList.toggle("hide")
+    periods.forEach((period) => {
+        period.classList.toggle("hide")
+    })
     setTimeout(function() {
         changeDisplayContent(id)
-    }, 750)
+    }, 600)
     setTimeout(function() {
         experienceDisplay.classList.toggle("hide")
-    }, 760)
+        periods.forEach((period) => {
+            period.classList.toggle("hide")
+        })
+    }, 700)
 }
 
 function changeDisplayContent(id) {

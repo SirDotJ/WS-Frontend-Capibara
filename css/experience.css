@@ -16,7 +16,13 @@
 }
 
 .experience-cards-period {
+    opacity: 1;
     padding: 16px 32px;
+    transition: all .75s ease-in-out;
+}
+
+.experience-cards-period.hide {
+    opacity: 0;
 }
 
 .experience-cards-period--background-gray-default {
