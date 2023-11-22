@@ -2,7 +2,7 @@
 
 const copyField = async(tag) => {
     const content = tag.innerText.replaceAll(" ", " ");
-    await navigator.clipboard.writeText(content);
+    navigator.clipboard.writeText(content);
 }
 
 const playFadeInFadeOut = async(tag) => {
@@ -13,6 +13,8 @@ const playFadeInFadeOut = async(tag) => {
 }
 
 const copyToClipboard = async(caller, tooltipId) => {
-    await copyField(caller)
-    await playFadeInFadeOut(document.getElementById(tooltipId))
+    copyField(caller).then(() => {
+        const toolTipElement = document.getElementById(tooltipId)
+        playFadeInFadeOut(toolTipElement)
+    })
 }
