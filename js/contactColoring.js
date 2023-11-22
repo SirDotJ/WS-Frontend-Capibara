@@ -10,11 +10,11 @@ function styleText(html) {
     const length = text.length;
     let newText = "";
     for (let i = 0; i < length; i++) {
-        var letter = text.at(i);
+        let letter = text.at(i);
         if (i % 2 === 0) { // color_1
-            letter = `<span style="color: ${color_1}">` + letter + `</span>`
+            letter = `<span style="color: ${color_1}">${letter}</span>`
         } else { // color_2
-            letter = `<span style="color: ${color_2}">` + letter + `</span>`
+            letter = `<span style="color: ${color_2}">${letter}</span>`
         }
         newText += letter;
     }

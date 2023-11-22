@@ -37,7 +37,6 @@ function fillExperienceCards() {
     for (let i = 0; i < experienceCount; i++) {
         const period = experiences[experienceCount - i - 1].period
         const gridAreaName = "period-" + (i + 1);
-
         html += `
             <div class="experience-cards-period experience-cards-period--background-gray-default" style="grid-area: ${gridAreaName}" onclick="displayExperience(${i})">
                 <p class="body-2 body-2--normal text--gray-950">
