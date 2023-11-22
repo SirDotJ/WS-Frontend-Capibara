@@ -11,11 +11,9 @@ function styleText(html) {
     let newText = "";
     for (let i = 0; i < length; i++) {
         let letter = text.at(i);
-        if (i % 2 === 0) { // color_1
-            letter = `<span style="color: ${color_1}">${letter}</span>`
-        } else { // color_2
-            letter = `<span style="color: ${color_2}">${letter}</span>`
-        }
+        i % 2 === 0
+            ? letter = `<span style="color: ${color_1}">${letter}</span>`
+            : letter = `<span style="color: ${color_2}">${letter}</span>`
         newText += letter;
     }
     return newText;
