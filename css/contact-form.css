@@ -1,3 +1,8 @@
+.contact-form {
+    background: url("../assets/images/contact_form_paralax_background.svg") fixed;
+    background-size: 40%;
+}
+
 .contact-form-content-wrapper {
     display: flex;
     flex-direction: column;
