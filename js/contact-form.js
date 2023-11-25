@@ -36,8 +36,21 @@ function addBlurEventListenersForInputs() {
                 label.classList.remove(`${errorClass}`)
                 input.classList.remove(`${errorClass}`)
             }
+
+            if (checkFormValidity(new FormData(userForm)))
+                activateSubmitButton()
+            else
+                deactivateSubmitButton()
         })
     }
+}
+
+const submitButton = document.querySelector("#contact-form > button")
+function activateSubmitButton() {
+    submitButton.classList.add("filled")
+}
+function deactivateSubmitButton() {
+    submitButton.classList.remove("filled")
 }
 
 window.addEventListener("load", () => {
@@ -54,23 +67,32 @@ function addSubmitEventListenerForForm() {
         let valid = checkFormValidity(formData)
         if (valid)
             saveData(formData)
+        else
+            highlightRequiredFields(formData)
     })
 }
 
 function checkFormValidity(formData) {
     let valid = true
 
+    for (let [name] of Object.entries(requiredFields)) {
+        const value = formData.get(name)
+        if (value === "")
+            return false
+    }
+
+    return valid
+}
+
+function highlightRequiredFields(formData) {
     for (let [name, label] of Object.entries(requiredFields)) {
         const input = userForm[name];
         const value = formData.get(name)
         if (value === "") {
-            valid = false
             input.classList.add("highlight")
             label.classList.add("highlight")
         }
     }
-
-    return valid
 }
 
 function saveData(sourceForm) {

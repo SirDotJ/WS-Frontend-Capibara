@@ -1,3 +1,7 @@
+.contact {
+    background: var(--gray-50);
+}
+
 .contact-content-wrapper {
     display: flex;
     flex-direction: column;
