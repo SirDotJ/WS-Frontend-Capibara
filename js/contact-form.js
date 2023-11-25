@@ -32,6 +32,15 @@ function addBlurEventListenersForInputs() {
             if (input.value === "") {
                 label.classList.add(`${errorClass}`)
                 input.classList.add(`${errorClass}`)
+            } else if (name === "phone") {
+                const numbers = input.value.replace(/\D+/g, '')
+                if (numbers.length !== 11) {
+                    input.classList.add("highlight")
+                    label.classList.add("highlight")
+                } else {
+                    label.classList.remove(`${errorClass}`)
+                    input.classList.remove(`${errorClass}`)
+                }
             } else {
                 label.classList.remove(`${errorClass}`)
                 input.classList.remove(`${errorClass}`)
@@ -53,12 +62,6 @@ function deactivateSubmitButton() {
     submitButton.classList.remove("filled")
 }
 
-window.addEventListener("load", () => {
-    initializeReceivedData(receivedData)
-    initializeRequiredFields(requiredFields)
-    addSubmitEventListenerForForm()
-})
-
 function addSubmitEventListenerForForm() {
     userForm.addEventListener("submit", async (event) => {
         event.preventDefault()
@@ -79,6 +82,11 @@ function checkFormValidity(formData) {
         const value = formData.get(name)
         if (value === "")
             return false
+        if (name === "phone") {
+            const numbers = value.replace(/\D+/g, '')
+            if (numbers.length !== 11)
+                return false
+        }
     }
 
     return valid
@@ -91,6 +99,12 @@ function highlightRequiredFields(formData) {
         if (value === "") {
             input.classList.add("highlight")
             label.classList.add("highlight")
+        } if (name === "phone") {
+            const numbers = value.replace(/\D+/g, '')
+            if (numbers.length !== 11) {
+                input.classList.add("highlight")
+                label.classList.add("highlight")
+            }
         }
     }
 }
@@ -100,3 +114,48 @@ function saveData(sourceForm) {
         receivedData[nameValue[0]] = nameValue[1]
     console.log(receivedData) // Mock for receiving data
 }
+
+const phoneInput = document.getElementById("contact-form__phone")
+function formatPhoneField() {
+    let value = phoneInput.value
+    let output
+    value = value.replace(/\D+/g, '') // Remove everything that's not a number
+    const valueLength = value.length
+
+    const area = value.substring(0, 1) // международный код
+    const prefix = value.substring(1, 4) // код региона (префикс)
+    const idFirstThree = value.substring(4, 7) // первые три номера id абонента
+    const idSecondTwo = value.substring(7, 9) // вторые два номер id абонента
+    const idLastTwo = value.substring(9, 11) // последние два номера id абонента
+
+    if (valueLength < 1) { // не ввели ничего и нет кода уже
+        output = `+${area}`
+    } else if (valueLength < 4) {
+        output = `+${area} ${prefix}`
+    } else if (valueLength < 8) {
+        output = `+${area} ${prefix} ${idFirstThree}`
+    } else if (valueLength < 10) {
+        output = `+${area} ${prefix} ${idFirstThree}-${idSecondTwo}`
+    } else {
+        output = `+${area} ${prefix} ${idFirstThree}-${idSecondTwo}-${idLastTwo}`
+    }
+    phoneInput.value = output
+
+    console.log(`value: ${value}`)
+    console.log(`valueLength: ${valueLength}`)
+    console.log(`prefix: ${prefix}`)
+    console.log(`idFirstThree: ${idFirstThree}`)
+    console.log(`idSecondTwo: ${idSecondTwo}`)
+    console.log(`idLastTwo: ${idLastTwo}`)
+    console.log(`output: ${output}`)
+}
+
+window.addEventListener("load", () => {
+    initializeReceivedData(receivedData)
+    initializeRequiredFields(requiredFields)
+    addSubmitEventListenerForForm()
+    phoneInput.addEventListener("keyup", formatPhoneField)
+    phoneInput.addEventListener("focus", formatPhoneField)
+})
+
+
