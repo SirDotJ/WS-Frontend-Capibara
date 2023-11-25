@@ -26,6 +26,7 @@
     <script src="js/reminder.js" async></script>
 
     <script src="js/experienceDisplaySwitch.js" defer></script>
+    <script src="js/contact-form.js" defer></script>
     <script src="js/contactColoring.js" defer></script>
 </head>
 <body class="site">
@@ -443,35 +444,35 @@
                 Do you wanna chat with Capibarara? Then send the request!
             </p>
         </div>
-        <div class="contact-form-input-wrapper">
-            <div class="contact-form-field-wrapper contact-form-field-wrapper--required"> <!-- Subject -->
+        <form id="contact-form" class="contact-form-input-wrapper">
+            <div class="contact-form-field-wrapper contact-form-field--required"> <!-- Subject -->
                 <label class="body-3 body-3--normal" for="contact-form__subject">
                     Subject*
                 </label>
-                <input id="contact-form__subject">
+                <input type="text" id="contact-form__subject" name="subject" class="body-1 body-1--normal">
             </div>
-            <div class="contact-form-field-wrapper contact-form-field-wrapper--required"> <!-- Name -->
+            <div class="contact-form-field-wrapper contact-form-field--required"> <!-- Name -->
                 <label class="body-3 body-3--normal" for="contact-form__name">
                     Name*
                 </label>
-                <input id="contact-form__name">
+                <input type="text" id="contact-form__name" name="name" class="body-1 body-1--normal">
             </div>
-            <div class="contact-form-field-wrapper contact-form-field-wrapper--required"> <!-- Phone -->
+            <div class="contact-form-field-wrapper contact-form-field--required"> <!-- Phone -->
                 <label class="body-3 body-3--normal" for="contact-form__phone">
                     Phone*
                 </label>
-                <input id="contact-form__phone">
+                <input type="tel" id="contact-form__phone" name="phone" class="body-1 body-1--normal">
             </div>
             <div class="contact-form-field-wrapper"> <!-- Description -->
                 <label class="body-3 body-3--normal" for="contact-form__description">
                     Description
                 </label>
-                <input id="contact-form__description" class="contact-form-field--description">
+                <textarea id="contact-form__description" class="contact-form-field--description body-1 body-1--normal" name="description"></textarea>
             </div>
-            <button class="contact-form__send-button body-2 body-2--medium text--gray-50 text--center">
+            <button type="submit" class="contact-form__send-button body-2 body-2--medium text--gray-50 text--center">
                 Send it!
             </button>
-        </div>
+        </form>
     </div>
 </section>
 <section class="contact" id="contact">

@@ -30,14 +30,18 @@
     opacity: 0.4;
 }
 
-.contact-form-field-wrapper > input {
+.contact-form-field-wrapper > label.highlight {
+    color: var(--error-500);
+}
+
+.contact-form-field-wrapper > input, .contact-form-field-wrapper > textarea {
     border-radius: 12px;
     border: 1px solid var(--gray-500);
     padding: 12px 16px;
 }
 
-.contact-form-field-wrapper--required {
-    /* Fill in later */
+.contact-form-field-wrapper > input.highlight {
+    border-color: var(--error-500);
 }
 
 .contact-form-field--description {
