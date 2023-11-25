@@ -49,6 +49,8 @@
 }
 
 .contact-form__send-button {
+    align-self: center;
+    width: fit-content;
     border-radius: 20px;
     background: var(--orange-400);
     padding: 8px 48px;
