@@ -123,8 +123,19 @@ function saveData(sourceForm) {
     console.log(receivedData); // Mock for receiving data
 }
 
+/* Checks if passed value is a whole number */
+function isNumeric(value) {
+    return /^-?\d+$/.test(value);
+}
+
 const phoneInput = document.getElementById("contact-form__phone");
-function formatPhoneField() {
+function formatPhoneField(event) {
+    const keyPressed = event.key;
+    if (!isNumeric(keyPressed)) {
+        event.preventDefault();
+        return;
+    }
+
     let value = phoneInput.value;
     let output;
     value = value.replace(/\D+/g, ''); // Remove everything that's not a number
@@ -154,7 +165,7 @@ window.addEventListener("load", () => {
     initializeReceivedData(receivedData);
     initializeRequiredFields(requiredFields);
     addSubmitEventListenerForForm();
-    phoneInput.addEventListener("keyup", formatPhoneField);
+    phoneInput.addEventListener("keypress", formatPhoneField);
     phoneInput.addEventListener("focus", formatPhoneField);
 })
 
