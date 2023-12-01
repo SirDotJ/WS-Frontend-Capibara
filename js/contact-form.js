@@ -7,8 +7,8 @@ const receivedData = {};
 function initializeReceivedData(receivedData) {
     const formData = new FormData(userForm);
 
-    for (let nameValue of formData.entries()) {
-        receivedData[nameValue[0]] = null;
+    for (const [name] of formData.entries()) {
+        receivedData[name] = null;
     }
 }
 
@@ -27,7 +27,7 @@ function initializeRequiredFields(requiredFields) {
 }
 
 function addBlurEventListenersForInputs() {
-    for (let [name, label] of Object.entries(requiredFields)) {
+    for (const [name, label] of Object.entries(requiredFields)) {
         const input = userForm[name];
         input.addEventListener("blur", () => {
             if (input.value === "") {
