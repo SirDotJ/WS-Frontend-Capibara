@@ -1,0 +1,95 @@
+.testimonials {
+    background: var(--gray-50);
+}
+
+.testimonials-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.testimonials-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.testimonial-card-wrapper {
+    display: flex;
+}
+
+.testimonials-cards {
+    display: grid;
+}
+
+.testimonial-card-wrapper {
+    border-radius: 12px;
+    padding: 32px;
+    background: var(--gray-default);
+    box-shadow: var(--drop-shadow-md);
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.testimonial-card-header {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.testimonial-card__portrait {
+    width: 104px;
+    height: 104px;
+    border-radius: 999px;
+}
+
+.testimonial-card-header-info {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.focused-card {
+    flex-direction: column;
+    gap: 0;
+    align-items: start;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .testimonials-cards {
+        grid-template-areas:
+            "card-1 . card-2 card-2 card-2"
+            "card-1 . card-3 . card-4";
+        grid-column-gap: 32px;
+        grid-row-gap: 28px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .testimonials-cards {
+        grid-template-areas:
+            "card-1 card-1 card-1"
+            "card-2 card-3 card-4";
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .testimonials-cards {
+        grid-template-areas:
+            "card-1"
+            "card-2"
+            "card-3"
+            "card-4";
+        grid-row-gap: 32px;
+    }
+}

@@ -1,105 +1,377 @@
 :root {
+
     /* Common */
-    --font-family: Inter;
+    --font-family: Inter, sans-serif;
     --font-color: var(--gray-900);
-    --default-letter-spacing: -0.02em; /* Используется там, где Letter Spacing не обозначен */
 
     /* Heading H1 */
+
+    --h1-font-family: var(--font-family);
+    --h1-font-color: var(--font-color);
+    --h1-font-weight-semi-bold: 600;
+    --h1-font-weight-bold: 700;
 
         /* Desktop */
     --h1-font-size-desktop: 60px;
     --h1-line-height-desktop: 72px;
     --h1-letter-spacing-desktop: -0.02em;
-    --h1-font-weight-desktop: 700;
 
         /* Tablet */
     --h1-font-size-tablet: 48px;
     --h1-line-height-tablet: 48px;
     --h1-letter-spacing-tablet: -0.02em;
-    --h1-font-weight-tablet: 700;
 
         /* Mobile */
     --h1-font-size-mobile: 36px;
     --h1-line-height-mobile: 40px;
-    --h1-letter-spacing-mobile: var(--default-letter-spacing);
-    --h1-font-weight-mobile: 600;
 
     /* Heading H2 */
+
+    --h2-font-family: var(--font-family);
+    --h2-font-color: var(--font-color);
+    --h2-font-weight-semi-bold: 600;
 
         /* Desktop */
     --h2-font-size-desktop: 36px;
     --h2-line-height-desktop: 40px;
     --h2-letter-spacing-desktop: -0.02em;
-    --h2-font-weight-desktop: 600;
 
         /* Tablet & Mobile */
     --h2-font-size-tablet-mobile: 18px;
     --h2-line-height-tablet-mobile: 28px;
     --h2-letter-spacing-tablet-mobile: -0.02em;
-    --h2-font-weight-tablet-mobile: 600;
 
     /* Heading H3 */
+
+    --h3-font-family: var(--font-family);
+    --h3-font-color: var(--font-color);
+    --h3-font-weight-semi-bold: 600;
+    --h3-font-weight-bold: 700;
 
         /* Desktop */
     --h3-font-size-desktop: 30px;
     --h3-line-height-desktop: 36px;
     --h3-letter-spacing-desktop: -0.02em;
-    --h3-font-weight-desktop-semi-bold: 600;
-    --h3-font-weight-desktop-bold: 700;
 
         /* Tablet & Mobile */
     --h3-font-size-tablet-mobile: 24px;
     --h3-line-height-tablet-mobile: 32px;
     --h3-letter-spacing-tablet-mobile: -0.02em;
-    --h3-font-weight-tablet-mobile-semi-bold: 600;
-    --h3-font-weight-tablet-mobile-bold: 700;
 
     /* Subtitle */
+
+    --subtitle-font-family: var(--font-family);
+    --subtitle-font-color: var(--font-color);
+    --subtitle-font-weight-normal: 400;
+    --subtitle-font-weight-semi-bold: 600;
 
         /* Desktop */
     --subtitle-font-size-desktop: 20px;
     --subtitle-line-height-desktop: 28px;
-    --subtitle-letter-spacing-desktop: var(--default-letter-spacing);
-    --subtitle-font-weight-desktop-normal: 400;
-    --subtitle-font-weight-desktop-semi-bold: 600;
 
         /* Tablet & Mobile */
     --subtitle-font-size-tablet-mobile: 18px;
     --subtitle-line-height-tablet-mobile: 28px;
-    --subtitle-letter-spacing-tablet-mobile: var(--default-letter-spacing);
-    --subtitle-font-weight-tablet-mobile-normal: 400;
-    --subtitle-font-weight-tablet-mobile-semi-bold: 600;
 
     /* Body1 */
+
+    --body-1-font-family: var(--font-family);
+    --body-1-font-color: var(--font-color);
+    --body-1-font-weight-normal: 400;
 
         /* Desktop */
     --body-1-font-size-desktop: 18px;
     --body-1-line-height-desktop: 28px;
-    --body-1-letter-spacing-desktop: var(--default-letter-spacing);
-    --body-1-font-weight-desktop-normal: 400;
 
         /* Tablet & Mobile */
     --body-1-font-size-tablet-mobile: 16px;
     --body-1-line-height-tablet-mobile: 24px;
-    --body-1-letter-spacing-tablet-mobile: var(--default-letter-spacing);
-    --body-1-font-weight-tablet-mobile-normal: 400;
 
     /* Body2 */
 
+    --body-2-font-family: var(--font-family);
+    --body-2-font-color: var(--font-color);
+    --body-2-font-weight-normal: 400;
+    --body-2-font-weight-medium: 500;
+    --body-2-font-weight-semi-bold: 600;
+    --body-2-text-decoration-line-underline: underline;
+
         /* All Screen Sizes */
-    --body-2-font-size-all: 16px;
-    --body-2-line-height-all: 24px;
-    --body-2-letter-spacing-all: var(--default-letter-spacing);
-    --body-2-font-weight-all-normal: 400;
-    --body-2-decoration-line-all-normal: none;
-    --body-2-decoration-line-all-underline: underline;
+    --body-2-font-size: 16px;
+    --body-2-line-height: 24px;
 
     /* Body3 */
 
+    --body-3-font-family: var(--font-family);
+    --body-3-font-color: var(--font-color);
+    --body-3-font-weight-normal: 400;
+    --body-3-font-weight-medium: 500;
+
         /* All Screen Sizes */
-    --body-3-font-size-all: 14px;
-    --body-3-line-height-all: 20px;
-    --body-3-letter-spacing-all: var(--default-letter-spacing);
-    --body-3-font-weight-all-normal: 400;
-    --body-3-font-weight-all-medium: 500;
+    --body-3-font-size: 14px;
+    --body-3-line-height: 20px;
+}
+
+/* All Screen Sizes */
+
+.h1 {
+    font-family: var(--h1-font-family);
+    color: var(--h1-font-color);
+}
+
+.h1--semi-bold {
+    font-weight: var(--h1-font-weight-semi-bold);
+}
+
+.h1--bold {
+    font-weight: var(--h1-font-weight-bold);
+}
+
+.h2 {
+    font-family: var(--h2-font-family);
+    color: var(--h2-font-color);
+}
+
+.h2--semi-bold {
+    font-weight: var(--h2-font-weight-semi-bold);
+}
+
+.h3 {
+    font-family: var(--h3-font-family);
+    color: var(--h3-font-color);
+}
+
+.h3--semi-bold {
+    font-weight: var(--h3-font-weight-semi-bold);
+}
+
+.h3--bold {
+    font-weight: var(--h3-font-weight-bold);
+}
+
+.subtitle {
+    font-family: var(--subtitle-font-family);
+    color: var(--subtitle-font-color);
+}
+
+.subtitle--normal {
+    font-weight: var(--subtitle-font-weight-normal);
+}
+
+.subtitle--semi-bold {
+    font-weight: var(--subtitle-font-weight-semi-bold);
+}
+
+.body-1 {
+    font-family: var(--body-1-font-family);
+    color: var(--body-1-font-color);
+}
+
+.body-1--normal {
+    font-weight: var(--body-1-font-weight-normal);
+}
+
+.body-2 {
+    font-family: var(--body-2-font-family);
+    color: var(--body-2-font-color);
+    font-size: var(--body-2-font-size);
+    line-height: var(--body-2-line-height);
+    font-weight: var(--body-2-font-weight-normal);
+}
+
+.body-2--normal {
+    font-weight: var(--body-2-font-weight-normal);
+}
+
+.body-2--medium {
+    font-weight: var(--body-2-font-weight-medium);
+}
+
+.body-2--semi-bold {
+    font-weight: var(--body-2-font-weight-semi-bold);
+}
+
+.body2--underline {
+    text-decoration-line: var(--body-2-text-decoration-line-underline);
+}
+
+.body-3 {
+    font-family: var(--body-3-font-family);
+    color: var(--body-3-font-color);
+    font-size: var(--body-3-font-size);
+    line-height: var(--body-3-line-height);
+}
+
+.body-3--normal {
+    font-weight: var(--body-3-font-weight-normal);
+}
+
+.body-3--medium {
+    font-weight: var(--body-3-font-weight-medium);
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .h1 {
+        font-size: var(--h1-font-size-desktop);
+        line-height: var(--h1-line-height-desktop);
+        letter-spacing: var(--h1-letter-spacing-desktop);
+        font-weight: var(--h1-font-weight-bold);
+    }
+
+    .h2 {
+        font-size: var(--h2-font-size-desktop);
+        line-height: var(--h2-line-height-desktop);
+        letter-spacing: var(--h2-letter-spacing-desktop);
+        font-weight: var(--h2-font-weight-semi-bold);
+    }
+
+    .h3 {
+        font-size: var(--h3-font-size-desktop);
+        line-height: var(--h3-line-height-desktop);
+        letter-spacing: var(--h3-letter-spacing-desktop);
+    }
+
+    .subtitle {
+        font-size: var(--subtitle-font-size-desktop);
+        line-height: var(--subtitle-line-height-desktop);
+    }
+
+    .body-1 {
+        font-size: var(--body-1-font-size-desktop);
+        line-height: var(--body-1-line-height-desktop);
+        font-weight: var(--body-1-font-weight-normal);
+    }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 1023px) {
+    .h2 {
+        font-size: var(--h2-font-size-tablet-mobile);
+        line-height: var(--h2-line-height-tablet-mobile);
+        letter-spacing: var(--h2-letter-spacing-tablet-mobile);
+        font-weight: var(--h2-font-weight-semi-bold);
+    }
+
+    .h3 {
+        font-size: var(--h3-font-size-tablet-mobile);
+        line-height: var(--h3-line-height-tablet-mobile);
+        letter-spacing: var(--h3-letter-spacing-tablet-mobile);
+    }
+
+    .subtitle {
+        font-size: var(--subtitle-font-size-tablet-mobile);
+        line-height: var(--subtitle-line-height-tablet-mobile);
+    }
+
+    .body-1 {
+        font-size: var(--body-1-font-size-tablet-mobile);
+        line-height: var(--body-1-line-height-tablet-mobile);
+        font-weight: var(--body-1-font-weight-normal);
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .h1 {
+        font-size: var(--h1-font-size-tablet);
+        line-height: var(--h1-line-height-tablet);
+        letter-spacing: var(--h1-letter-spacing-tablet);
+        font-weight: var(--h1-font-weight-bold);
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .h1 {
+        font-size: var(--h1-font-size-mobile);
+        line-height: var(--h1-line-height-mobile);
+        font-weight: var(--h1-font-weight-semi-bold);
+    }
+}
+
+/* Additional modifications */
+
+.text--center {
+    text-align: center;
+}
+
+.text--three-line-cutoff {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.text--gray-default {
+    color: var(--gray-default);
+}
+
+.text--gray-50 {
+    color: var(--gray-50);
+}
+
+.text--gray-100 {
+    color: var(--gray-100);
+}
+
+.text--gray-200 {
+    color: var(--gray-200);
+}
+
+.text--gray-300 {
+    color: var(--gray-300);
+}
+
+.text--gray-400 {
+    color: var(--gray-400);
+}
+
+.text--gray-500 {
+    color: var(--gray-500);
+}
+
+.text--gray-600 {
+    color: var(--gray-600);
+}
+
+.text--gray-700 {
+    color: var(--gray-700);
+}
+
+.text--gray-800 {
+    color: var(--gray-800);
+}
+
+.text--gray-900 {
+    color: var(--gray-900);
+}
+
+.text--gray-950 {
+    color: var(--gray-950);
+}
+
+.text--orange-300 {
+    color: var(--orange-300);
+}
+
+.text--orange-400 {
+    color: var(--orange-400);
+}
+
+.text--orange-500 {
+    color: var(--orange-500);
+}
+
+.text--yellow-500 {
+    color: var(--yellow-500);
+}
+
+.text--error-500 {
+    color: var(--error-500);
+}
+
+.text--bold {
+    font-weight: bold;
 }

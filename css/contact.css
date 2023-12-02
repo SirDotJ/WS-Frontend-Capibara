@@ -1,0 +1,126 @@
+.contact {
+    position: relative;
+    padding: 96px 80px;
+}
+
+.contact-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-header > p {
+    align-self: stretch;
+    max-width: 576px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-info-item-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact-info-item-wrapper > h2 {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+/* Filter turns black colored svg to color #ffd600 (i. e. --yellow-500) */
+/* Source: top solution - https://stackoverflow.com/questions/807878/how-to-make-javascript-execute-after-page-load */
+/* Filter is found using https://codepen.io/sosuke/pen/Pjoqqp */
+.contact-info__item::before {
+    filter: invert(71%) sepia(60%) saturate(855%) hue-rotate(2deg) brightness(108%) contrast(103%);
+    width: 32px;
+    height: 32px;
+    /* The bottom mess is used to center the displayed svg
+    inside the :before pseudo element
+    while also keeping 8px separation from text */
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.contact-info__item--email::before {
+    content: url("../assets/images/envelope.svg");
+}
+
+.contact-info__item--phone::before {
+    content: url("../assets/images/phone-alt.svg");
+}
+
+.contact-info-item__copy-tooltip {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.75s, visibility 0.75s;
+    padding: 3px 12px;
+    z-index: 2;
+    background: var(--gray-300);
+    border-radius: 12px 6px;
+    text-align: center;
+}
+
+.contact-info-item__copy-tooltip.fadeInFadeOut {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .contact-info-item__copy-tooltip--email-offset {
+        transform: scale(0.75) translateX(370%) translateY(-40%);
+    }
+
+    .contact-info-item__copy-tooltip--phone-offset {
+        transform: scale(0.75) translateX(290%) translateY(-40%);
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contact-info-item__copy-tooltip--email-offset {
+        transform: scale(0.5) translateX(325%) translateY(-40%);
+    }
+
+    .contact-info-item__copy-tooltip--phone-offset {
+        transform: scale(0.5) translateX(260%) translateY(-40%);
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .contact-info-item__copy-tooltip--email-offset {
+        transform: scale(0.5) translateX(325%) translateY(-40%);
+    }
+
+    .contact-info-item__copy-tooltip--phone-offset {
+        transform: scale(0.5) translateX(260%) translateY(-40%);
+    }
+}
+
+/* Tablet Vertical */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    .contact-content-wrapper {
+        gap: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .contact-content-wrapper {
+        gap: 24px;
+    }
+}

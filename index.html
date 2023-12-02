@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Capibarara</title>
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/colors.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/breakpoints.css">
+    <link rel="stylesheet" type="text/css" href="css/drop-shadows.css">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/hero.css">
+    <link rel="stylesheet" type="text/css" href="css/skills.css">
+    <link rel="stylesheet" type="text/css" href="css/experience.css">
+    <link rel="stylesheet" type="text/css" href="css/work.css">
+    <link rel="stylesheet" type="text/css" href="css/testimonials.css">
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/reminder.css">
+
+    <script src="js/copyOnClick.js" async></script>
+    <script src="js/burger.js" async></script>
+    <script src="js/reminder.js" async></script>
+
+    <script src="js/experienceDisplaySwitch.js" defer></script>
+    <script src="js/contactColoring.js" defer></script>
+</head>
+<body class="site">
+<section class="header">
+    <div class="header-content-wrapper">
+        <img class="header__logo" src="assets/images/logo.svg" alt="Логотип Capibara com">
+        <nav class="header-navigation">
+            <a class="body-2 body-2--medium text--gray-600" href="#experience">
+                Experience
+            </a>
+            <a class="body-2 body-2--medium text--gray-600" href="#work">
+                Work
+            </a>
+            <a class="body-2 body-2--medium text--gray-600" href="#testimonials">
+                Testimonials
+            </a>
+            <a class="body-2 body-2--medium text--gray-600" href="#contact">
+                Contact
+            </a>
+        </nav>
+        <button class="header-burger-button" onclick="openBurger()">
+            <img class="header-burger-button__image" src="assets/images/burger.svg" alt="Кнопка навигации">
+        </button>
+    </div>
+</section>
+<div id="burger-menu">
+    <div class="burger-menu-header">
+        <img class="burger-menu__logo" src="assets/images/logo.svg" alt="Логотип Capibara com">
+        <button class="burger-menu__close-button" onclick="closeBurger()">
+            <img class="burger-menu-close-button__close-image" src="assets/images/times.svg" alt="Закрыть">
+        </button>
+    </div>
+    <nav class="burger-menu-navigation">
+        <a class="body-2 body-2--medium text--gray-600" href="#experience" onclick="closeBurger()">
+            Experience
+        </a>
+        <a class="body-2 body-2--medium text--gray-600" href="#work" onclick="closeBurger()">
+            Work
+        </a>
+        <a class="body-2 body-2--medium text--gray-600" href="#testimonials" onclick="closeBurger()">
+            Testimonials
+        </a>
+        <a class="body-2 body-2--medium text--gray-600" href="#contact" onclick="closeBurger()">
+            Contact
+        </a>
+    </nav>
+</div>
+<section class="hero">
+    <div class="hero-content-wrapper">
+        <div class="hero-info">
+            <div class="hero-text-wrapper">
+                <h1 class="h1 h1--bold text--gray-900">
+                    Hi, I'm Capybarara&nbsp;👋
+                </h1>
+                <p class="body-2 body-2--normal text--gray-600">
+                    Known for its adorable appearance and friendly nature, the
+                    Capybara is now embarking on a journey to find a new job.
+                    Motivated by the desire to explore new opportunities and
+                    challenges, the Capybara is determined to utilize its unique skills
+                    and traits to secure a fulfilling position!
+                </p>
+            </div>
+        </div>
+        <div class="hero-portrait">
+            <div class="hero-portrait__shadow"></div>
+            <img class="hero-portrait__image " src="assets/images/portrait.png" alt="Портрет Капибары">
+        </div>
+        <a class="employ" href="#contact">
+            <button class="employ__button subtitle subtitle--semi-bold text--gray-50">
+                I WANNA EMPLOY YOU!!!!
+            </button>
+        </a>
+    </div>
+</section>
+<div class="waves">
+    <div class="waves__wave waves__wave--back"></div>
+
+    <img class="waves__apricot" src="assets/images/apricot.svg" alt="Апельсин на волнах">
+    <img class="waves__apricot apricot--turned" src="assets/images/apricot.svg" alt="Апельсин на волнах">
+
+    <div class="waves__wave waves__wave--front"></div>
+</div>
+<section class="skills">
+    <div class="skills-content-wrapper">
+        <div class="skills-header">
+            <h1 class="h1 h1--bold text--center text--gray-600">
+                Skills
+            </h1>
+            <p class="subtitle subtitle--normal text--center text--gray-600">
+                The skills, tools and technologies Capybara really good at:
+            </p>
+        </div>
+        <div class="skills-carousel-wrapper">
+            <div class="skill-card-wrapper">
+                <img class="skill-card__image" src="assets/images/icon-javascript.svg" alt="Javascript Лого">
+                <p class="body-1 body-1--normal text--center text--gray-600">
+                    Javascript
+                </p>
+            </div>
+            <div class="skill-card-wrapper">
+                <img class="skill-card__image" src="assets/images/icon-typescript.svg" alt="Typescript Лого">
+                <p class="body-1 body-1--normal text--center text--gray-600">
+                    Typescript
+                </p>
+            </div>
+            <div class="skill-card-wrapper">
+                <img class="skill-card__image" src="assets/images/icon-react.svg" alt="React Лого">
+                <p class="body-1 body-1--normal text--center text--gray-600">
+                    React
+                </p>
+            </div>
+            <div class="skill-card-wrapper">
+                <img class="skill-card__image" src="assets/images/icon-nextjs.svg" alt="Next.js Лого">
+                <p class="body-1 body-1--normal text--center text--gray-600">
+                    Next.js
+                </p>
+            </div>
+            <div class="skill-card-wrapper">
+                <img class="skill-card__image" src="assets/images/icon-nodejs.svg" alt="Node.js Лого">
+                <p class="body-1 body-1--normal text--center text--gray-600">
+                    Node.js
+                </p>
+            </div>
+        </div>
+        <img class="skills__corner-apricot-image" src="assets/images/apricot_corner.png" alt="Большой апельсин на правом нижнем углу">
+    </div>
+</section>
+<section class="experience experience--background-gray-50" id="experience">
+    <div class="experience-content-wrapper">
+        <div class="experience-header-wrapper">
+            <h1 class="h1 h1--bold text--center text--orange-500">
+                Experience
+            </h1>
+            <p class="subtitle subtitle--normal text--center text--gray-600">
+                Here is a quick summary of Capibarara most recent experiences:
+            </p>
+        </div>
+        <div id="experience-cards"> <!--  Filled by experienceDisplaySwitch.js  -->
+            <div class="error_display h2 h2--bold">Oops, something went wrong</div>
+        </div>
+    </div>
+    <img class="experience__bottom-left-apricots" src="assets/images/apricot_pile_1.png" alt="Куча апельсинов в левом нижнем углу">
+    <img class="experience__bottom-right-apricots" src="assets/images/apricot_pile_2.png" alt="Куча апельсинов в правом нижнем углу">
+</section>
+<section class="work" id="work">
+    <div class="work-content-wrapper">
+        <div class="work-header">
+            <h1 class="h1 h1--bold text--center text--gray-600">
+                Work
+            </h1>
+            <p class="subtitle subtitle--normal text--center text--gray-600">
+                Some of the noteworthy projects Capibarara have built:
+            </p>
+        </div>
+        <div class="work-card">
+            <div class="work-preview work-preview--background_gray_100">
+                <img class="work-preview__image" src="assets/images/capybara_facts.png" alt="Превью capybarafacts.com">
+            </div>
+            <div class="work-description-wrapper">
+                <div class="work-description-content">
+                    <p class="subtitle subtitle--semi-bold">
+                        Capybara Facts
+                    </p>
+                    <p class="body-2">
+                        This site provides detailed and accurate
+                        information about capybaras. It covers
+                        various topics such as their habitat, physical
+                        characteristics, behavior, diet, and lifecycle.
+                        It may also include interesting facts and
+                        trivia about capybaras. The site aims to
+                        educate visitors who are interested in
+                        learning more about these unique creatures
+                    </p>
+                    <div class="work-tags">
+                        <div class="work-tags__tag">
+                            Next.js
+                        </div>
+                        <div class="work-tags__tag">
+                            Typescript
+                        </div>
+                        <div class="work-tags__tag">
+                            PostgreSQL
+                        </div>
+                        <div class="work-tags__tag">
+                            Tailwindcss
+                        </div>
+                        <div class="work-tags__tag">
+                            Figma
+                        </div>
+                        <div class="work-tags__tag">
+                            Storybook
+                        </div>
+                        <div class="work-tags__tag">
+                            Git
+                        </div>
+                    </div>
+                    <div class="work-button-wrapper">
+                        <a href="https://capybarafacts.com">
+                            <img class="work__button" src="assets/images/external_link.svg" alt="Ссылка: capybarafacts.com">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="work-card work-card--reversed_areas">
+            <div class="work-preview work-preview--background_gray_100">
+                <img class="work-preview__image" src="assets/images/capibara_tips.png" alt="Превью capybaratips.com">
+            </div>
+            <div class="work-description-wrapper">
+                <div class="work-description-content">
+                    <p class="subtitle subtitle--semi-bold">
+                        CapybaraTips
+                    </p>
+                    <p class="body-2">
+                        This website is dedicated to providing practical tips and guides
+                        on how to care for capybara as pets. It covers essential topics
+                        such as feeding and nutrition, housing and environment setup,
+                        health and hygiene, socialization, and training. The site may
+                        also include testimonials or experiences shared by capybara
+                        owners or experts. It aims to assist individuals who are
+                        considering or already own capybaras as pets.
+                    </p>
+                    <div class="work-tags">
+                        <div class="work-tags__tag">
+                            Next.js
+                        </div>
+                        <div class="work-tags__tag">
+                            Typescript
+                        </div>
+                        <div class="work-tags__tag">
+                            PostgreSQL
+                        </div>
+                        <div class="work-tags__tag">
+                            Tailwindcss
+                        </div>
+                        <div class="work-tags__tag">
+                            Figma
+                        </div>
+                        <div class="work-tags__tag">
+                            Storybook
+                        </div>
+                        <div class="work-tags__tag">
+                            Git
+                        </div>
+                    </div>
+                    <a class="work-button-wrapper" href="https://capybaratips.com">
+                        <img class="work__button" src="assets/images/external_link.svg" alt="Ссылка: capybarafacts.com">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="work-card">
+            <div class="work-preview work-preview--background_gray_100">
+                <img class="work-preview__image" src="assets/images/what_is_capybara.png" alt="Превью whatiscapybara.com">
+            </div>
+            <div class="work-description-wrapper">
+                <div class="work-description-content">
+                    <p class="subtitle subtitle--semi-bold">
+                        What Is Capybara
+                    </p>
+                    <p class="body-2">
+                        This site serves as a comprehensive introduction to capybaras
+                        for those who are unfamiliar with the species. It covers basic
+                        information, such as the capybara's classification, origin, and
+                        distinct features. It may include images or illustrations to help
+                        readers visualize the animal. The site's main objective is to
+                        provide a general overview for individuals seeking introductory
+                        knowledge about capybaras.
+                    </p>
+                    <div class="work-tags">
+                        <div class="work-tags__tag">
+                            Next.js
+                        </div>
+                        <div class="work-tags__tag">
+                            Typescript
+                        </div>
+                        <div class="work-tags__tag">
+                            PostgreSQL
+                        </div>
+                        <div class="work-tags__tag">
+                            Tailwindcss
+                        </div>
+                        <div class="work-tags__tag">
+                            Figma
+                        </div>
+                        <div class="work-tags__tag">
+                            Storybook
+                        </div>
+                        <div class="work-tags__tag">
+                            Git
+                        </div>
+                    </div>
+                    <a class="work-button-wrapper" href="https://capybarafacts.com">
+                        <img class="work__button" src="assets/images/external_link.svg" alt="Ссылка: capybarafacts.com">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testimonials" id="testimonials">
+    <div class="testimonials-content-wrapper">
+        <div class="testimonials-header">
+            <h1 class="h1 h1--bold text--center text--orange-500">
+                Testimonials
+            </h1>
+            <p class="subtitle subtitle--normal text--center text--gray-600">
+                Nice things people said about me:
+            </p>
+        </div>
+        <div class="testimonial-cards-wrapper">
+            <div class="testimonials-cards">
+                <div class="testimonial-card-wrapper" style="grid-area: card-1">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-header">
+                            <img class="testimonial-card__portrait" src="assets/images/testimonial_sarah.png" alt="Портрет Sarah">
+                            <div class="testimonial-card-header-info focused-card">
+                                <p class="subtitle subtitle--semi-bold text--gray-900">
+                                    Sarah
+                                </p>
+                                <p class="subtitle subtitle--normal text--gray-600">
+                                    Frontend Developer
+                                </p>
+                            </div>
+                        </div>
+                        <p class="body-2">
+                            "I had the opportunity to see a Capibarara at the zoo,
+                            and it was such an incredible experience! They are
+                            such gentle creatures and so fascinating to watch.
+                            Their size and calm nature definitely make them
+                            unique among other animal species."
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial-card-wrapper" style="grid-area: card-2">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-header">
+                            <!--                    <img class="testimonial-card__portrait" src="assets/images/testimonial_jason.png" alt="Портрет Jason">-->
+                            <div class="testimonial-card-header-info">
+                                <h3 class="subtitle subtitle--semi-bold text--gray-900">
+                                    Jason
+                                </h3>
+                                <p class="body-3 body-3--normal text--gray-600">
+                                    / Manager
+                                </p>
+                            </div>
+                        </div>
+                        <p class="body-2 text--three-line-cutoff">
+                            "I recently read about Capybarara and I must say, they
+                            are truly fascinating animals. Their social behavior and
+                            close-knit family structures are so interesting, and I
+                            love how they live in such harmony with other animals
+                            in their habitats. Definitely one of the most underrated
+                            animals out there!"
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial-card-wrapper" style="grid-area: card-3">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-header">
+                            <!--                    <img class="testimonial-card__portrait" src="assets/images/testimonial_emma.png" alt="Портрет Emma">-->
+                            <div class="testimonial-card-header-info">
+                                <h3 class="subtitle subtitle--semi-bold text--gray-900">
+                                    Emma
+                                </h3>
+                                <p class="body-3 body-3--normal text--gray-600">
+                                    / Backend Developer
+                                </p>
+                            </div>
+                        </div>
+                        <p class="body-2 text--three-line-cutoff">
+                            "I had the chance to interact with a Capybarara at a
+                            wildlife sanctuary, and it was such a memorable
+                            experience. They are extremely friendly and
+                            affectionate. I was surprised by how intelligent they
+                            are, and their level of comfort with humans. I would
+                            highly recommend anyone to see them up close!"
+                        </p>
+                    </div>
+                </div>
+                <div class="testimonial-card-wrapper" style="grid-area: card-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-header">
+                            <!--                    <img class="testimonial-card__portrait" src="assets/images/testimonial_megan.png" alt="Портрет Megan">-->
+                            <div class="testimonial-card-header-info">
+                                <h3 class="subtitle subtitle--semi-bold text--gray-900">
+                                    Megan
+                                </h3>
+                                <p class="body-3 body-3--normal text--gray-600">
+                                    / DevOps
+                                </p>
+                            </div>
+                        </div>
+                        <p class="body-2 text--three-line-cutoff">
+                            "As an animal lover, I've always been fascinated by
+                            Capybarara. They are super social creatures and thrive
+                            in groups. It's amazing how they have adaptations that
+                            allow them to live both on land and in water. Their
+                            unique appearance and laid-back personality make
+                            them the perfect animal to admire!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="contact-content-wrapper">
+        <div class="contact-header">
+            <h1 class="h1 h1--bold text--center text--gray-600">
+                Get in touch
+            </h1>
+            <p class="subtitle subtitle--normal text--center text--gray-600">
+                What's next? Feel free to reach out to Capibarara if you're
+                looking for a developer, have a query, or simply want to connect.
+            </p>
+        </div>
+        <div class="contact-info">
+            <div class="contact-info-item-wrapper">
+                <h2 id="email" class="contact-info__item contact-info__item--email h2 h2--semi-bold text--center text--gray-600" onclick="copyToClipboard(this, 'email-copy-tooltip')">capibarara@gmail.com</h2>
+                <span id="email-copy-tooltip" class="contact-info-item__copy-tooltip contact-info-item__copy-tooltip--email-offset subtitle subtitle--normal text--center text--gray-600">Copied!</span>
+            </div>
+            <div class="contact-info-item-wrapper">
+                <h2 id="phone" class="contact-info__item contact-info__item--phone h2 h2--semi-bold text--center text--gray-600" onclick="copyToClipboard(this, 'phone-copy-tooltip')">+8&nbsp;800&nbsp;200-59-20</h2>
+                <span id="phone-copy-tooltip" class="contact-info-item__copy-tooltip contact-info-item__copy-tooltip--phone-offset subtitle subtitle--normal text--center text--gray-600">Copied!</span>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="reminder">
+    <img class="reminder__image" src="assets/images/annoying_reminder.png" alt="Do you wanna employ me?">
+    <button class="reminder__close-button" onclick="hideReminder()">
+        <img src="assets/images/times.svg" alt="Close">
+    </button>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.skills-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skills-carousel-wrapper {
+    width: 100%; /* Необходимо для обеспечивания расширения контейнера до максимальной ширины */
+    max-width: 720px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skill-card-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card__image {
+    width: 64px;
+    height: 64px;
+}
+
+.skills__corner-apricot-image {
+    position: absolute;
+    width: 110px;
+    height: 160px;
+    right: 0;
+    bottom: 0;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .skills__corner-apricot-image {
+        display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .skills__corner-apricot-image {
+        display: block;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .skills__corner-apricot-image {
+        display: none;
+    }
+
+    .skills-carousel-wrapper > .skill-card-wrapper:nth-last-child(1) {
+        display: none;
+    }
+
+    .skills-carousel-wrapper > .skill-card-wrapper:nth-last-child(2) {
+        display: none;
+    }
+}
