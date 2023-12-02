@@ -129,11 +129,22 @@ function isNumeric(value) {
 }
 
 const phoneInput = document.getElementById("contact-form__phone");
+const defaultArea = "+7";
 function formatPhoneField(event) {
     event.preventDefault();
 
-    const keyPressed = event.key;
-    if (!isNumeric(keyPressed)) {
+    let addition;
+    if (event.type === "keypress") {
+        addition = event.key;
+        if (!isNumeric(addition)) {
+            return;
+        }
+    } else if (event.type === "paste") {
+        addition = event.clipboardData.getData("text");
+        if (addition.length <= 13) { // предоставили телефон без кода области
+            addition = `${defaultArea} ${addition}`;
+        }
+    } else {
         return;
     }
 
@@ -141,7 +152,7 @@ function formatPhoneField(event) {
     const oldPosition = event.target.selectionStart;
     const oldValue = phoneInput.value;
 
-    let value = phoneInput.value.concat(keyPressed);
+    let value = phoneInput.value.concat(addition);
     let output;
     value = value.replace(/\D+/g, ''); // Remove everything that's not a number
     const valueLength = value.length;
@@ -179,6 +190,7 @@ window.addEventListener("load", () => {
     initializeRequiredFields(requiredFields);
     addSubmitEventListenerForForm();
     phoneInput.addEventListener("keypress", formatPhoneField);
+    phoneInput.addEventListener("paste", formatPhoneField);
     phoneInput.addEventListener("focus", formatPhoneField);
 })
 
