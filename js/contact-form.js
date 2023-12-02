@@ -130,16 +130,25 @@ function isNumeric(value) {
 
 const phoneInput = document.getElementById("contact-form__phone");
 function formatPhoneField(event) {
+    event.preventDefault();
+
     const keyPressed = event.key;
     if (!isNumeric(keyPressed)) {
-        event.preventDefault();
         return;
     }
 
-    let value = phoneInput.value;
+    /* For keeping cursor position consistent */
+    const oldPosition = event.target.selectionStart;
+    const oldValue = phoneInput.value;
+
+    let value = phoneInput.value.concat(keyPressed);
     let output;
     value = value.replace(/\D+/g, ''); // Remove everything that's not a number
     const valueLength = value.length;
+
+    if (valueLength >= 12) { // input makes phone too big
+        return;
+    }
 
     const area = value.substring(0, 1); // международный код
     const prefix = value.substring(1, 4); // код региона (префикс)
@@ -151,14 +160,18 @@ function formatPhoneField(event) {
         output = `+${area}`;
     } else if (valueLength < 4) {
         output = `+${area} ${prefix}`;
-    } else if (valueLength < 8) {
+    } else if (valueLength < 7) {
         output = `+${area} ${prefix} ${idFirstThree}`;
-    } else if (valueLength < 10) {
+    } else if (valueLength < 9) {
         output = `+${area} ${prefix} ${idFirstThree}-${idSecondTwo}`;
     } else {
         output = `+${area} ${prefix} ${idFirstThree}-${idSecondTwo}-${idLastTwo}`;
     }
     phoneInput.value = output;
+
+    /* Restoring cursor position according to change */
+    const sizeDifference = phoneInput.value.length - oldValue.length;
+    event.target.setSelectionRange(oldPosition + sizeDifference, oldPosition + sizeDifference);
 }
 
 window.addEventListener("load", () => {
