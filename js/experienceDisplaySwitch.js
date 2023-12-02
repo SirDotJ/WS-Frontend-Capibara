@@ -35,14 +35,14 @@ function fillExperienceCards() {
 
     const experienceCount = experiences.length;
     for (let i = 0; i < experienceCount; i++) {
-        const period = experiences[experienceCount - i - 1].period
+        const period = experiences[experienceCount - i - 1].period;
         const gridAreaName = "period-" + (i + 1);
         html += `
             <div class="experience-cards-period experience-cards-period--background-gray-default" style="grid-area: ${gridAreaName}" onclick="displayExperience(${i})">
                 <p class="body-2 body-2--normal text--gray-950">
                     ${period}
                 </p>
-            </div>`
+            </div>`;
     }
 
     html += `
@@ -50,7 +50,7 @@ function fillExperienceCards() {
             <img class="experience-display__logo" src="../assets/images/ws-logo.svg" alt="Логотип White Soft">
             <p class="experience-display-content__title subtitle subtitle--semi-bold text--gray-900"></p>
             <ul class="experience-display-list"></ul>
-        </div>`
+        </div>`;
 
     experienceCards.innerHTML = html;
     displayExperience(defaultExperienceToDisplay);
@@ -59,20 +59,20 @@ function fillExperienceCards() {
 let savedMobileAreas = ""
 function displayExperience(id) {
     const experienceDisplay = document.getElementById("experience-display");
-    const periods = document.querySelectorAll("#experience-cards > .experience-cards-period")
-    experienceDisplay.classList.toggle("hide")
+    const periods = document.querySelectorAll("#experience-cards > .experience-cards-period");
+    experienceDisplay.classList.toggle("hide");
     periods.forEach((period) => {
-        period.classList.toggle("hide")
-    })
+        period.classList.toggle("hide");
+    });
     setTimeout(function() {
-        changeDisplayContent(id)
-    }, 600)
+        changeDisplayContent(id);
+    }, 600);
     setTimeout(function() {
-        experienceDisplay.classList.toggle("hide")
+        experienceDisplay.classList.toggle("hide");
         periods.forEach((period) => {
-            period.classList.toggle("hide")
-        })
-    }, 700)
+            period.classList.toggle("hide");
+        });
+    }, 700);
 }
 
 function changeDisplayContent(id) {
@@ -84,32 +84,33 @@ function changeDisplayContent(id) {
     previousSelected = id;
 
     /* Setting the title */
-    const title = document.querySelector("#experience-display > .experience-display-content__title")
-    title.innerText = experiences[id].role
+    const title = document.querySelector("#experience-display > .experience-display-content__title");
+    title.innerText = experiences[id].role;
 
     /* Filling out the tasks list */
     const tasks = experiences[id].tasks;
-    const list = document.querySelector("#experience-display > .experience-display-list")
+    const list = document.querySelector("#experience-display > .experience-display-list");
     let listHTML = "";
     for (let i = 0; i < tasks.length; i++) {
         listHTML += `
                 <li class="test body-2 body-2--normal text--gray-600">
                     ${tasks[i]}
-                </li>`
+                </li>`;
     }
-    list.innerHTML = listHTML
+    list.innerHTML = listHTML;
 
     /* Calculating change of template-area for mobile */
-    let mobileAreas = ``
+    let mobileAreas = ``;
     for (let i = 0; i < experiences.length; i++) {
-        mobileAreas += `"period-${i + 1}"\n`
-        if (id === i)
-            mobileAreas += `"display"\n`
+        mobileAreas += `"period-${i + 1}"\n`;
+        if (id === i) {
+            mobileAreas += `"display"\n`;
+        }
     }
-    savedMobileAreas = mobileAreas
+    savedMobileAreas = mobileAreas;
     /* Not applied for desktop/tablet but saved if we resize to mobile */
     if (window.innerWidth < 768) {
-        experienceCards.style.gridTemplateAreas = `${mobileAreas}`
+        experienceCards.style.gridTemplateAreas = `${mobileAreas}`;
     }
 }
 
@@ -118,26 +119,26 @@ function selectPeriod(period) {
     const text = period.querySelectorAll("p");
     text.forEach((element) => {
         element.classList.add(selectedClass);
-    })
+    });
 }
 function unselectPeriod(period) {
     const text = period.querySelectorAll("p");
     text.forEach((element) => {
         element.classList.remove(selectedClass);
-    })
+    });
 }
 
 /* Used to make sure that grid areas change correctly on resize */
 window.addEventListener(`resize`, function(event) {
     if (event.target.innerWidth >= 768) {
-        let newAreas = ``
+        let newAreas = ``;
         for (let i = 0; i < experiences.length; i++) {
-            newAreas += `"period-${i + 1} display"\n`
+            newAreas += `"period-${i + 1} display"\n`;
         }
-        experienceCards.style.gridTemplateAreas = `${newAreas}`
+        experienceCards.style.gridTemplateAreas = `${newAreas}`;
     } else {
-        experienceCards.style.gridTemplateAreas = `${savedMobileAreas}`
+        experienceCards.style.gridTemplateAreas = `${savedMobileAreas}`;
     }
 }, true)
 
-fillExperienceCards()
+fillExperienceCards();
