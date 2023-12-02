@@ -1,7 +1,8 @@
 'use strict';
 
 const copyField = async(tag) => {
-    const content = tag.innerText.replaceAll(" ", " ");
+    let content = tag.innerText.replaceAll(" ", " ");
+    content = content.replaceAll("\n", ""); // Accounts for new lines due to color formatting
     navigator.clipboard.writeText(content);
 }
 
